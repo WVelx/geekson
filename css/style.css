@@ -11,30 +11,56 @@ nav{
     color: var(--white);
 }
 
-header{
-    background: linear-gradient(
-        rgba(94, 23, 235, 0.2),
-        rgba(0, 0, 0, 0.9)
-    ),
-    url(../source/Fondo_Inicial.jpg) center center no-repeat;
-    color: var(--white);
-    padding-top: 15rem;
-    padding-bottom: 14rem;
-    text-align: left;
-}
-
 footer{
     background-color: var(--black);
     color: var(--white);
 }
 
-.logo{
+.header{
+    background: linear-gradient(
+        rgba(94, 23, 235, 0.2),
+        rgba(0, 0, 0, 0.9)
+    ),
+    url(../source/Fondo_Inicial.jpg);
+    background-size: cover;
+    background-position: center center;
+
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+    color: var(--white);
+    vertical-align: middle;
+}
+
+.header-content{
+    vertical-align: middle;
+    padding-bottom: 15.6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content-main{
+    margin: 0 auto;
+    padding-top: 24rem;
+    position: relative;
+}
+
+.logo-nav{
     height: 35px;
     max-width: 100%;
     
     vertical-align: middle;
     border-style: none;
 }    
+
+.logo-footer{
+    height: 130px;
+    max-width: 100%;
+    
+    vertical-align: middle;
+    border-style: none;
+}
 
 .social-container{
     justify-content: center;
