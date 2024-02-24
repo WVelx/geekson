@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.addEventListener('load', () => {
         setTimeout(() => {
           preloader.classList.add('loaded');
-        }, 1000);
+        }, 600);
         setTimeout(() => {
           preloader.remove();
         }, 2000);
