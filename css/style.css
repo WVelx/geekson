@@ -1,0 +1,48 @@
+:root{
+    --black: #000000;
+    --purple: #5E17EB;
+    --white: #ffffff;
+    --gray_white: #dddddd;
+}
+
+nav{
+    color: var(--white);
+}
+
+header{
+    background: linear-gradient(
+        rgba(94, 23, 235, 0.2),
+        rgba(0, 0, 0, 0.9)
+    ),
+    url(../source/Fondo_Inicial.jpg) center center no-repeat;
+    color: var(--white);
+    padding-top: 15rem;
+    padding-bottom: 14rem;
+    text-align: left;
+}
+
+footer{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.logo{
+    height: 35px;
+    max-width: 100%;
+    
+    vertical-align: middle;
+    border-style: none;
+}    
+
+.social-container{
+    justify-content: center;
+    font-size: 35px;
+}
+
+.p_info{
+    color: var(--gray_white) !important;
+}
+
+.icon{
+    color: var(--white);
+}
