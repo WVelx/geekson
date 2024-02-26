@@ -7,6 +7,10 @@
     --gray_white: #dddddd;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 nav{
     color: var(--white);
 }
@@ -14,6 +18,13 @@ nav{
 footer{
     background-color: var(--black);
     color: var(--white);
+}
+
+.height-view{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    
 }
 
 .header{
@@ -35,14 +46,13 @@ footer{
 
 .header-content{
     vertical-align: middle;
-    padding-bottom: 15.6rem;
     position: relative;
     overflow: hidden;
 }
 
 .header-content-main{
     margin: 0 auto;
-    padding-top: 20rem;
+    padding-top: 35vh;
     position: relative;
 }
 
@@ -75,12 +85,13 @@ footer{
     color: var(--white);
 }
 
+.icon-dark{
+  color: var(--black);
+}
+
 .a:hover{
   color: #5E17EB;
 }
-
-
-
 
 
 #preloader {
@@ -190,6 +201,12 @@ footer{
   .padding1{
     padding: 0.5%;
   }
+
+  .padding2{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .padding3{
     padding: 3%;
   }
@@ -197,3 +214,25 @@ footer{
   .font1{
     font-size: 2rem;
   }
+
+  .font-2{
+    font-size: 3rem;
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pagination-space {
+    height: 40px;
+}

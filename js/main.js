@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    "use strict";
   
     const preloader = document.querySelector('#preloader');
     if (preloader) {
@@ -16,5 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', () => {
       aos_init();
     });
-  
+    
   });
