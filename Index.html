@@ -5,90 +5,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- link -->
+    <!-- LINKS STYLE-EXTRAS -->
+    <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <title>GeeksonDigital</title>
+    <title>Document</title>
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
 
+    <!-- Line of Preloader page -->
     <div id="preloader">
         <div class="line"></div>
     </div>
 
-    <main id="main" data-aos="fade" data-aos-delay="1000">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark ">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img class="logo-nav" src="/source/Logo.png" alt>
+    <div class="offcanvas offcanvas-start header-offcanvas slide" tabindex="-1" id="offcanvasResponsive">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close me-2 btn-close-white" data-bs-dismiss="offcanvas"
+                data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            <div class="container text-center pb-2">
+                <a href="">
+                    <img class="icon-logo" src="source/Icon_Logo.png" alt="">
                 </a>
-
-                <!--  
-                <div class="navbar-collapse offcanvas-collapse">
-                    <div class="d-flex ms-auto flex-column flex-lg-row align-items-center">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="">Inicio</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="">Acerca de</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="">Servicios</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="">Nuestros proyectos</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="">Contacto</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                -->
             </div>
-        </nav>
 
-        <section id="Home" class="header">
-            <div class="container header-content">
-                <div class="row header-content-main">
-                    <div class="col-lg-7 pb-3">
-                        <h1 class="fw-bold fs-1">GEEKSON DIGITAL</h1>
-                        <p class="fs-4 fw-bold p_info">Technological Solutions</p>
-                    </div>
+            <ul class="navbar-nav">
+                <li class="nav-item py-1">
+                    <a href="#About-us" class="nav-link">Nosotros</a>
+                </li>
+                <li class="nav-item py-1">
+                    <a href="#Service-us" class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item py-1">
+                    <a href="#Our-portfolio" class="nav-link">Nuestros productos</a>
+                </li>
+                <li class="nav-item py-1">
+                    <a href="#Our-clients" class="nav-link">Nuestros clientes</a>
+                </li>
+                <li class="nav-item py-1">
+                    <a href="#Contact" class="nav-link">Contactanos</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mt-auto offcanvas-footer text-center">
+            <p>Derechos de autor &copy; 2024 GeeksonDigital</p>
+            <ul class="list-inline">
+                <a class="px-2 a-offcanvas" href=""><i class="fa-brands fa-facebook icon a"></i></a>
+                <a class=" px-2 a-offcanvas" href=""><i class="fa-brands fa-whatsapp icon a"></i></a>
+            </ul>
+        </div>
+    </div>
 
-                    <div class="container row">
-                        <div class="col-auto pb-2">
-                            <button class="btn btn-outline-light"> SOLICITA TU PROYECTO </button>
-                        </div>
-                        <div class="col-auto">
-                            <button class="btn btn-outline-light"> NUESTROS SERVICIOS </button>
-                        </div>
-                    </div>
-                </div>
+    <!-- Content page -->
+    <div data-aos="fade" data-aos-delay="1000">
+
+        <header class="navbar navbar-expand-lg navbar-dark fixed-top" id="header">
+            <button class="ms-2 navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+                <span class="navbar-toggler-icon navbar-toggler-white"></span>
+            </button>
+
+            <div class="col-md me-auto ms-auto text-center">
+                <a href="#Home" class="navbar-brand">
+                    <img class="logo-header" src="source/Logo.png" alt="">
+                </a>
             </div>
-        </section>
 
-        <div>
-            <section class="p-5" id="About-us">
-                <h2 class="text-center fw-bold fs-1">NOSOTROS</h2>
-                <div class="container height-view">
+            <div class="col-md collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto me-4 mb-lg-0">
+                    <li class="nav-item px-1">
+                        <a href="#About-us" class="nav-link">Nosotros</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a href="#Service-us" class="nav-link">Servicios</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a href="#Our-portfolio" class="nav-link">Nuestros productos</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a href="#Our-clients" class="nav-link">Nuestros clientes</a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a href="#Contact" class="nav-link">Contactanos</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <section id="Home" class="section show">
+
+            </section>
+            <section id="About-us" class="section py-5">
+                <h2 class="text-center fw-bold fs-1">SOBRE NOSOTROS</h2>
+                <div class="container pt-4">
                     <div class="row">
                         <div class="col-lg">
                             <div class="row">
                                 <div class="col-md">
                                     <h3 class="fw-bold fs-2">¿QUIENES SOMOS?</h3>
-                                    <p class="fs-6">
+                                    <p class="pt-3 fs-6">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt ut labore et dolore magna aliqua. Nisl suscipit adipiscing bibendum
                                         est
@@ -109,11 +133,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="container height-view">
+                <div class="container pt-4">
                     <div class="row">
                         <div class="col-lg">
                             <h3 class="fw-bold fs-2">NUESTRO EQUIPO</h3>
-                            <div class="container">
+                            <div class="container pt-3">
                                 <div class="swiper mySwiper">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
@@ -131,11 +155,11 @@
                                                         natoque penatibus et magnis.</p>
                                                     <div class="social-icons">
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-facebook icon-dark a"></i></a>
+                                                                class="fab fa-facebook icon-white a"></i></a>
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-twitter icon-dark a"></i></a>
+                                                                class="fab fa-twitter icon-white a"></i></a>
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-instagram icon-dark a"></i></a>
+                                                                class="fab fa-instagram icon-white a"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -155,11 +179,11 @@
                                                         natoque penatibus et magnis.</p>
                                                     <div class="social-icons">
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-facebook icon-dark a"></i></a>
+                                                                class="fab fa-facebook icon-white a"></i></a>
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-twitter icon-dark a"></i></a>
+                                                                class="fab fa-twitter icon-white a"></i></a>
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-instagram icon-dark a"></i></a>
+                                                                class="fab fa-instagram icon-white a"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -179,11 +203,11 @@
                                                         natoque penatibus et magnis.</p>
                                                     <div class="social-icons">
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-facebook icon-dark a"></i></a>
+                                                                class="fab fa-facebook icon-white a"></i></a>
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-twitter icon-dark a"></i></a>
+                                                                class="fab fa-twitter icon-white a"></i></a>
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-instagram icon-dark a"></i></a>
+                                                                class="fab fa-instagram icon-white a"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -203,11 +227,11 @@
                                                         natoque penatibus et magnis.</p>
                                                     <div class="social-icons">
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-facebook icon-dark a"></i></a>
+                                                                class="fab fa-facebook icon-white a"></i></a>
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-twitter icon-dark a"></i></a>
+                                                                class="fab fa-twitter icon-white a"></i></a>
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-instagram icon-dark a"></i></a>
+                                                                class="fab fa-instagram icon-white a"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -227,11 +251,11 @@
                                                         natoque penatibus et magnis.</p>
                                                     <div class="social-icons">
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-facebook icon-dark a"></i></a>
+                                                                class="fab fa-facebook icon-white a"></i></a>
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-twitter icon-dark a"></i></a>
+                                                                class="fab fa-twitter icon-white a"></i></a>
                                                         <a href="#" class="social-icon"><i
-                                                                class="fab fa-instagram icon-dark a"></i></a>
+                                                                class="fab fa-instagram icon-white a"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -247,114 +271,121 @@
                     </div>
                 </div>
             </section>
-            <section id="Service-us">
+            <section id="Service-us" class="section section-dark py-5">
                 <h2 class="text-center fw-bold fs-1">SERVICIOS</h2>
                 <div class="row">
 
                 </div>
             </section>
-            <section id="Our-portfolio">
+            <section id="Our-portfolio" class="section py-5">
                 <h2 class="text-center fw-bold fs-1">NUESTROS PRODUCTOS</h2>
                 <div class="row">
 
                 </div>
             </section>
-            <section id="Our-clients">
-                <h2 class="text-center fw-bold fs-1">NUESTOS CLIENTES</h2>
+            <section id="Our-clients" class="section section-dark py-5">
+                <h2 class="text-center fw-bold fs-1">NUESTROS CLIENTES</h2>
                 <div class="row">
 
                 </div>
             </section>
-            <section id="Contact" class="height-view">
-                <h2 class="text-center fw-bold fs-1">CONTACTANOS</h2>
-                <div class="row">
-                    <div class="col-md">
-                        <div class="container text-center">
-                            <h3 class="text-center fw-bold fs-2">Siguenos en:</h3>
-                            <p class="">
-                                <a class="font-2" href=""><i class="fa-brands fa-facebook icon-dark a"></i></a>
-                            </p>
+            <section id="Contact" class="section py-5">
+                <h2 class="text-center fw-bold fs-1 pb-2">CONTACTANOS</h2>
+                <div class="content-contact">
+                    <div class="row div-form-contact">
+                        <div class="col-md-4 div-follow">
+                            <div class="container text-center">
+                                <h3 class="text-center fw-bold fs-4">Siguenos en:</h3>
+                                <p class="">
+                                    <a class="a-contact" href=""><i class="fa-brands fa-facebook icon"></i></a>
+                                </p>
+                            </div>
+                            <div class="container text-center">
+                                <h3 class="fw-bold fs-4">Charla con nosotros en:</h3>
+                                <p class="">
+                                    <a class="a-contact" href=""><i class="fa-brands fa-whatsapp icon"></i></a>
+                                </p>
+                            </div>
                         </div>
-                        <div class="container text-center">
-                            <h3 class="fw-bold fs-2">Charla con nosotros en:</h3>
-                            <p class="">
-                                <a class="font-2" href=""><i class="fa-brands fa-whatsapp icon-dark a"></i></a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="container col-md">
-                        <h3 class="text-center fw-bold fs-2">Formulario de contacto</h3>
-                        <div class="container p-2">
-                            <div class="p-2">
-                                <input type="text" class="form-control focus-ring-success">
-                            </div>
-                            <div class="col-md p-2">
-                                <input type="text" class="form-control focus-ring-success">
-                            </div>
-                            <div class="col-md p-2">
-                                <input type="text" class="form-control focus-ring-success">
-                            </div>
-                            <div class="p-2">
-                                <textarea class="form-control" rows="5"></textarea>
+                        <div class="col-md div-form">
+                            <h3 class="text-center fw-bold fs-2">Formulario de contacto</h3>
+                            <div class="p-1">
+                                <div class="py-3">
+                                    <input type="text" class="form-control form-contact py-2" placeholder="Ingresa tu nombre">
+                                </div>
+                                <div class="py-3">
+                                    <input type="text" class="form-control form-contact py-2" placeholder="Ingresa tu correo electronico">
+                                </div>
+                                <div class="py-3">
+                                    <input type="text" class="form-control form-contact py-2" placeholder="Ingresa el asunto del correo">
+                                </div>
+                                <div class="py-3">
+                                    <textarea class="form-control form-contact py-2" rows="5" placeholder="Ingresa tu mensaje"></textarea>
+                                </div>
+                                <div class="text-center pt-3">
+                                    <button class="btn btn-light w-100">Enviar formulario</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
 
-        <footer class="container-fluid text-center padding1">
+        <footer class="container-fluid text-center py-3 section">
 
-            <div class="row padding2">
-                <div class="col-md ">
-                    <p>
-                        <img class="logo-footer my-1" src="/source/logo-center.png" alt>
+            <div class="row">
+                <div class="col-md text-center py-2">
+                    <p class="m-0">
+                        <img class="logo-footer my-1" src="/source/logo-center.png">
                     </p>
-
-                    <p class="">
-                        <a class="px-2 font1" href=""><i class="fa-brands fa-facebook icon a"></i></a>
-                        <a class=" px-2 font1" href=""><i class="fa-brands fa-whatsapp icon a"></i></a>
-                    </p>
+                    
+                    <div class="pt-2">
+                        <a class="px-2 a-footer" href=""><i class="fa-brands fa-facebook icon"></i></a>
+                        <a class=" px-2 a-footer" href=""><i class="fa-brands fa-whatsapp icon"></i></a>
+                    </div>
                 </div>
 
-                <div class="col-md pb-2">
+                <div class="col-md pt-2">
                     <h6 class="fw-bold fs-5">Acceso Directo</h6>
                     <p class="my-1 p_info">
 
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item active">
-                            <a class="nav-link a" href="">Inicio</a>
+                            <a class="nav-link p-1" href="#Home">Inicio</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link a" href="">Acerca de</a>
+                            <a class="nav-link p-1" href="#About-us">Acerca de nosotros</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link a" href="">Servicios</a>
+                            <a class="nav-link p-1" href="#Service-us">Servicios</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link a" href="">Nuestros proyectos</a>
+                            <a class="nav-link p-1" href="#Our-portfolio">Nuestros proyectos</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link a" href="">Contacto</a>
+                            <a class="nav-link p-1" href="#Our-clients">Clientes</a>
                         </li>
                     </ul>
                     </p>
                 </div>
 
-                <div class="col-md pb-2">
-                    <h6 class="fw-bold fs-5 padding3">Contáctanos</h6>
-                    <p class="my-1 p_info"><i class="fa-solid fa-location-dot icon"></i> Florencia - Caquetá, Colombia
+                <div class="col-md py-2">
+                    <h6 class="fw-bold fs-5">Contáctanos</h6>
+                    <p class="my-1 p_info"><i class="fa-solid fa-location-dot"></i> Florencia - Caquetá, Colombia
                     </p>
-                    <p class="my-1 p_info"><i class="fa-solid fa-mobile-screen icon"></i> +57 3133151739</p>
-                    <p class="my-1 p_info link-info"><i class="fa-solid fa-envelope icon"></i> geeksondigital@gmail.com
+                    <p class="my-1 p_info"><i class="fa-solid fa-mobile-screen"></i> +57 3133151739</p>
+                    <p class="my-1 p_info link-info"><i class="fa-solid fa-envelope"></i> geeksondigital@gmail.com
                     </p>
                 </div>
 
             </div>
 
-            <div>
-                <p class="text-center">
-                    © Copyright 2024 <a class="font-weight-bold " href="index.php">Geekson Digital</a>.
+            <hr class="border-3 border-white m-0">
+
+            <div class="pt-3">
+                <p class="text-center m-0">
+                    © Copyright 2024 <a class="font-weight-bold " href="#">Geekson Digital</a>.
                     <br>
                     Todos Los Derechos Reservados.
                     <br>
@@ -362,11 +393,13 @@
             </div>
 
         </footer>
-    </main>
+    </div>
 
+    <!-- SCRIPTS -->
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 'auto',
