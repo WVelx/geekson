@@ -16,6 +16,12 @@
  *      ## Our-clients
  *      ## Contact
  *  # Footer
+
+ * #Display
+ * #Color
+ * #Font
+ * #Padding
+ * #Margin
  * =================================================================== */
 
 /* ===================================================================
@@ -29,6 +35,7 @@
   --white: #ffffff;
   --gray_white: #dddddd;
   --gray: #969696;
+  --darkgray: #303030;
 }
 
 /* ===================================================================
@@ -147,13 +154,14 @@ body {
 }
 
 .title{
-  font-size: 7vh;
+  font-size: 4vh;
   font-weight: bold;
 }
 
 .line-title{
   padding-left: 25vw;
   padding-right: 25vw;
+  
 }
 
 @keyframes fliter {
@@ -170,6 +178,7 @@ body {
 
 .animated-fliter{
   animation: fliter 4s ease infinite;
+  color: #5E17EB;
 }
 
 /* ===================================================================
@@ -187,7 +196,7 @@ header.transparent {
 }
 
 header.dark {
-  background-color: var(--black) !important;
+  background-color: black;
 }
 
 a.nav-link {
@@ -454,8 +463,7 @@ section {
   padding-left: 1vw;
   padding-right: 1vw;
 
-  background-color: var(--black);
-  color: var(--white);
+  
 }
 
 .div-form {
@@ -465,23 +473,31 @@ section {
 .form-contact {
   background: transparent !important;
   border: 0px !important;
-  border-bottom: 3px solid var(--white) !important;
-  color: var(--gray_white) !important;
+  border-bottom: 3px solid var(--black) !important;
+  color: var(--black) !important;
 }
 
-.form-contact::placeholder {
-  color: var(--gray_white) !important;
-}
+
 
 .form-contact:hover,
-.form-contact:focus {
+.form-contact:focus{
   transition: 0.45s ease-in-out;
   border-color: var(--purple) !important;
 }
 
-.btn-light:hover,
-.btn-light:active,
-.btn-light:focus {
+.form-contact::placeholder,
+.form-contact::placeholder{
+  color: var(--gray) !important;
+}
+
+.form-contact:hover::placeholder,
+.form-contact:focus::placeholder{
+  color: var(--purple) !important;
+}
+
+.btn-dark:hover,
+.btn-dark:active,
+.btn-dark:focus {
   transition: 0.6s ease-in-out;
   background-color: var(--purple) !important;
   color: var(--white) !important;
@@ -501,12 +517,30 @@ section {
   color: #5E17EB;
 }
 
+.icon2 {
+  color: var(--black);
+}
+
+.icon2:hover {
+  transition: 0.45s ease-in-out;
+  font-size: 7.5vh;
+  color: #5E17EB;
+}
+
+.icon3{
+  transition: 0.45s ease-in-out;
+  color: #8345ff;
+}
+.icon4:hover{
+  transition: 0.30s ease-in-out;
+  color: #5E17EB;
+}
 /* ===================================================================
 * # Footer
 * ------------------------------------------------------------------- */
 
 footer {
-  background-color: var(--black);
+  background-color: black;
   color: var(--white);
 }
 
@@ -577,4 +611,37 @@ footer {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
+}
+
+.displayflex{
+  display: flex;
+}
+.colorBase{
+color: #5E17EB;
+}
+.font1-5{
+  font-size: 4vh;
+}
+.font9{
+  font-size: 7vh;
+}
+.font10{
+  font-size: 7vh;
+}
+.font12{
+  font-size: max(5vw, 5vh);
+}
+
+.textjus{
+  text-align: justify;
+}
+
+  .padding1{
+  padding: 1%;
+}
+.padding3{
+  padding: 3%;
+}
+.margin1{
+  margin: 1%;
 }

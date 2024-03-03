@@ -8,6 +8,7 @@
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
+  --bs-mainpurple: #5E17EB;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
@@ -7582,9 +7583,10 @@ textarea.form-control-lg {
   border-color: rgba(var(--bs-dark-rgb), var(--bs-border-opacity)) !important;
 }
 
-.border-black {
+.border-purple {
   --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-black-rgb), var(--bs-border-opacity)) !important;
+  border-color: rgba(var(--bs-purple), var(--bs-border-opacity)) !important;
+  
 }
 
 .border-white {
@@ -7629,7 +7631,7 @@ textarea.form-control-lg {
 }
 
 .border-2 {
-  border-width: 2px !important;
+  border-width: 5px !important;
 }
 
 .border-3 {
