@@ -430,25 +430,27 @@
                         <div class="col-md div-form">
                             <h3 class="text-center fw-bold fs-2">Formulario de Contacto</h3>
                             <div class="p-1">
-                                <div class="py-3" style="display: flex;">
-                                    <input type="text" class="form-control form-contact py-2 margin1" 
-                                        placeholder="Ingresa tu nombre">
+                                <form name="sentMessage" method="post" action="./sendEmail/Email.php" >
+                                    <div class="py-3" style="display: flex;">
+                                        <input type="text" class="form-control form-contact py-2 margin1" name="name" 
+                                            placeholder="Ingresa tu nombre">
 
-                                        <input type="text" class="form-control form-contact py-2 margin1"
-                                        placeholder="Ingresa tu correo electronico">
-                                </div>
-                 
-                                <div class="py-3">
-                                    <input type="text" class="form-control form-contact py-2"
-                                        placeholder="Ingresa el asunto del correo">
-                                </div>
-                                <div class="py-3">
-                                    <textarea class="form-control form-contact py-2" rows="5"
-                                        placeholder="Ingresa tu mensaje"></textarea>
-                                </div>
-                                <div class="text-center pt-3">
-                                    <button class="btn btn-dark w-100">Enviar formulario</button>
-                                </div>
+                                            <input type="text" class="form-control form-contact py-2 margin1" name="email"
+                                            placeholder="Ingresa tu correo electronico">
+                                    </div>
+                    
+                                    <div class="py-3">
+                                        <input type="text" class="form-control form-contact py-2" name="subject"
+                                            placeholder="Ingresa el asunto del correo">
+                                    </div>
+                                    <div class="py-3">
+                                        <textarea class="form-control form-contact py-2" rows="5" name="message"
+                                            placeholder="Ingresa tu mensaje"></textarea>
+                                    </div>
+                                    <div class="text-center pt-3">
+                                        <button class="btn btn-dark ">Enviar <i class="fa-solid fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
