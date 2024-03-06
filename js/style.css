@@ -145,14 +145,9 @@
   }
 }
 
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 70vw;
-  }
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 40rem;}
 }
 
 /* ===================================================================
@@ -163,7 +158,7 @@ body {
   overflow-x: hidden;
 }
 
-.title {
+.title{
   font-size: 6vh;
   font-weight: bold;
 
@@ -171,17 +166,17 @@ body {
   margin: 0;
 }
 
-.line-title {
+.line-title{
   width: 50%;
   margin: auto;
 }
 
-.line-writer {
+.line-writer{
   white-space: nowrap;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
-.animated-writer {
+.animated-writer{
   animation: typewriter 2s steps(48, end);
 }
 
@@ -189,24 +184,17 @@ body {
   0% {
     opacity: 1;
   }
-
   50% {
     opacity: 0.2;
   }
-
   100% {
     opacity: 1;
   }
 }
 
-.animated-fliter {
+.animated-fliter{
   animation: fliter 4s ease infinite;
-  color: var(--purple);
-}
-
-.animated-fliter-white{
-  animation: fliter 3s ease infinite;
-  color: var(--white);
+  color: #5E17EB;
 }
 
 /* ===================================================================
@@ -337,26 +325,23 @@ section {
   vertical-align: middle;
 }
 
-.content-home {
+.content-home{
   padding-top: 45vh;
   padding-left: 10vw;
-  padding-right: 10vw;
 }
 
-.name-company {
+.name-company{
   font-size: 7vh;
 }
 
-.typewrite {
-  font-size: 3.5vh;
-  font-weight: 900;
+.typewrite{
   color: transparent;
 
-  -webkit-text-stroke: 1.5px var(--white);
-}
-
-.line-home{
-  padding-right: 50vw;
+  text-shadow: 
+                -1px -1px 0 var(--purple),  
+                1px -1px 0 var(--purple),
+                -1px 1px 0 var(--purple),
+                1px 1px 0 var(--purple);
 }
 
 /* ## About-us */
@@ -366,9 +351,15 @@ section {
   height: 100%;
 }
 
-.swiper-wrapper {
+.swiper-wrapper{
   height: 360px !important;
 }
+
+/*
+.swiper-slide:hover{
+  border-color: transparent;
+  transition: border-color 0.6s ease;
+}*/
 
 svg {
   width: 100%;
@@ -393,6 +384,23 @@ svg {
   stroke-dashoffset: -480;
 }
 
+
+/*
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.6s ease-in-out !important;
+}
+
+.swiper-slide:hover{
+  transition: transform 0.6s ease;
+  box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.2);
+}
+*/
+
 .swiper-pagination-employeed .swiper-pagination-bullet-active-main {
   background-color: var(--purple) !important;
   animation: fliter 4s ease infinite;
@@ -416,48 +424,48 @@ svg {
   color: var(--black);
 }
 
-.img-face {
+.img-face{
   height: 15rem !important;
 }
 
-.work-pos {
+.work-pos{
   color: var(--purple) !important;
 }
 
 /* ## SERVICE */
 
-.img-service {
+.img-service{
   height: 20vh !important;
 }
 
 /* ## OUR-PROYECT */
 
-.container-image-collage {
+.container-image-collage{
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   grid-template-rows: 250px;
   grid-gap: 20px;
 }
 
-.box-image img {
+.box-image img{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.box-image:nth-child(1) {
+.box-image:nth-child(1){
   grid-column-start: span 2;
 }
 
-.box-image:nth-child(4) {
+.box-image:nth-child(4){
   grid-column-start: span 2;
 }
 
 /* ## OUR-CLIENTS */
 
-.swiper-pagination-clients .swiper-pagination-bullet {
+.swiper-pagination-clients .swiper-pagination-bullet{
   background-color: var(--gray);
 }
 
@@ -483,7 +491,7 @@ svg {
   width: 100%;
   height: 100%;
   background-color: transparent !important;
-  color: white;
+  color: white; 
   font-weight: bolder;
   opacity: 0;
   display: flex;
@@ -529,7 +537,7 @@ svg {
   padding-left: 1vw;
   padding-right: 1vw;
 
-
+  
 }
 
 .div-form {
@@ -546,18 +554,18 @@ svg {
 
 
 .form-contact:hover,
-.form-contact:focus {
+.form-contact:focus{
   transition: 0.45s ease-in-out;
   border-color: var(--purple) !important;
 }
 
 .form-contact::placeholder,
-.form-contact::placeholder {
+.form-contact::placeholder{
   color: var(--gray) !important;
 }
 
 .form-contact:hover::placeholder,
-.form-contact:focus::placeholder {
+.form-contact:focus::placeholder{
   color: var(--purple) !important;
 }
 
@@ -593,16 +601,14 @@ svg {
   color: #5E17EB;
 }
 
-.icon3 {
+.icon3{
   transition: 0.45s ease-in-out;
   color: #8345ff;
 }
-
-.icon4:hover {
+.icon4:hover{
   transition: 0.30s ease-in-out;
   color: #5E17EB;
 }
-
 /* ===================================================================
 * # Footer
 * ------------------------------------------------------------------- */
@@ -626,47 +632,43 @@ footer {
 }
 
 
-@media only screen and (max-width: 1000px) {
-  .line-home{
-    padding-right: 35vw;
-  }
-
-  .name-company {
+@media only screen and (max-width: 1000px){
+  .name-company{
     font-size: 5vh;
   }
 
-  .swiper-wrapper {
+  .swiper-wrapper{
     height: 340px !important;
   }
 
-  .title {
+  .title{
     font-size: 3.5vh;
     font-weight: bold;
   }
 
-  .swiper-slide-active {
+  .swiper-slide-active{
     box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0);
   }
 
-  .img-face {
+  .img-face{
     height: 25vh !important;
   }
 
-  .container-image-collage {
-    grid-template-columns: repeat(1, 1fr);
+  .container-image-collage{
+    grid-template-columns: repeat(1,1fr);
   }
-
-  .box-image:nth-child(1) {
+  
+  .box-image:nth-child(1){
     grid-column-start: span 1;
   }
-
-  .box-image:nth-child(4) {
+  
+  .box-image:nth-child(4){
     grid-column-start: span 1;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .swiper-wrapper {
+  .swiper-wrapper{
     height: 320px !important;
   }
 
@@ -698,42 +700,35 @@ footer {
   }
 }
 
-.displayflex {
+.displayflex{
   display: flex;
 }
-
-.colorBase {
-  color: #5E17EB;
+.colorBase{
+color: #5E17EB;
 }
-
-.font1-5 {
+.font1-5{
   font-size: 4vh;
 }
-
-.font9 {
+.font9{
   font-size: 7vh;
 }
-
-.font10 {
+.font10{
   font-size: 7vh;
 }
-
-.font12 {
+.font12{
   font-size: max(5vw, 5vh);
 }
 
-.textjus {
+.textjus{
   text-align: justify;
 }
 
-.padding1 {
+  .padding1{
   padding: 1%;
 }
-
-.padding3 {
+.padding3{
   padding: 3%;
 }
-
-.margin1 {
+.margin1{
   margin: 1%;
 }

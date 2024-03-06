@@ -1,4 +1,4 @@
-/* =================================================================== 
+/* ===================================================================
  *  GEEKSON DIGITAL style.css
  *  ------------------------------------------------------------------
  *
@@ -12,44 +12,57 @@
 /* ===================================================================
  * #Const
  * ------------------------------------------------------------------- */
-const preloader = document.querySelector('#preloader');
-const header = document.getElementById('header');
-const sections = document.querySelectorAll('.section');
+const preloader = document.querySelector("#preloader");
+const header = document.getElementById("header");
+const sections = document.querySelectorAll(".section");
 const threshold = 400;
 
-
 /* ===================================================================
- * # Animations 
+ * # Animations
  * ------------------------------------------------------------------- */
 
 /* # Preloader */
-function animationPreloader(){
-    if (preloader) {
-        window.addEventListener('load', () => {
-          setTimeout(() => {
-            preloader.classList.add('loaded');
-          }, 600);
-          setTimeout(() => {
-            preloader.remove();
-          }, 2000);
-        });
-      }
+function animationPreloader() {
+  if (preloader) {
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        preloader.classList.add("loaded");
+      }, 600);
+      setTimeout(() => {
+        preloader.remove();
+      }, 2000);
+    });
+  }
 }
 
 /* # Load content section */
-function loadContent_up(){
-  sections.forEach(function(section) {
+function loadContent_up() {
+  sections.forEach(function (section) {
     var position = section.getBoundingClientRect().top;
     var screenHeight = window.innerHeight;
 
     if (position < screenHeight * 0.95 && !section.classList.contains("show")) {
       section.classList.add("show");
-    } else if (position > screenHeight * 0.95 && section.classList.contains("show")) {
+
+      if (section.getAttribute("data-title")) {
+        var Titleid = section.getAttribute("data-title");
+        var title = document.getElementById(Titleid);
+        title.classList.add("line-writer", "animated-writer");
+      }
+    } else if (
+      position > screenHeight * 0.95 &&
+      section.classList.contains("show")
+    ) {
       section.classList.remove("show");
+
+      if (section.getAttribute("data-title")) {
+        var Titleid = section.getAttribute("data-title");
+        var title = document.getElementById(Titleid);
+        title.classList.remove("line-writer", "animated-writer");
+      }
     }
   });
 }
-
 
 /* ===================================================================
  * # Update color background header
@@ -63,7 +76,7 @@ function updateHeader() {
       currentSection = section.id;
     }
   });
-  
+
   header.classList.remove("transparent", "dark");
 
   if (currentSection === "Home") {
@@ -76,11 +89,11 @@ function updateHeader() {
 /* ===================================================================
  * # DOM content loaded
  * ------------------------------------------------------------------- */
-document.addEventListener('DOMContentLoaded', function() {
-    animationPreloader();
+document.addEventListener("DOMContentLoaded", function () {
+  animationPreloader();
 });
 
-window.addEventListener("scroll", function(){
+window.addEventListener("scroll", function () {
   updateHeader();
   loadContent_up();
 });
