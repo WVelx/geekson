@@ -359,6 +359,103 @@ section {
   padding-right: 50vw;
 }
 
+.btn-home-contact{
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: none;
+  color: white;
+  background-color: transparent;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.btn-home-contact span{
+  position: absolute;
+  display: block;
+  background: var(--white);
+}
+
+.btn-home-contact span:nth-child(1){
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.25s;
+}
+
+.btn-home-contact:hover span:nth-child(1){
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.25s;
+}
+
+.btn-home-contact span:nth-child(2){
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}
+
+.btn-home-contact:hover span:nth-child(2){
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+  transition-delay: 0.25s;
+}
+
+.btn-home-contact span:nth-child(3){
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.25s;
+  transition-delay: 0.5s;
+}
+
+.btn-home-contact:hover span:nth-child(3){
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.25s;
+  transition-delay: 0.5s;
+}
+
+.btn-home-contact span:nth-child(4){
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(1);
+  transform-origin: right;
+  transition: transform 0.25s;
+  transition-delay: 0.75s;
+}
+
+.btn-home-contact:hover span:nth-child(4){
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s;
+  transition-delay: 0.75s;
+}
+
+.btn-home-contact:hover{
+  background: var(--white);
+  color: var(--purple);
+  transition: 0.5s;
+  transition-delay: 1s;
+}
+
 /* ## About-us */
 
 .swiper {
