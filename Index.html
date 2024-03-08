@@ -17,7 +17,7 @@
     <title>GEEKSON DIGITAL</title>
 </head>
 
-<body data-spy="scroll" data-target=".fixed-top">
+<body data-target=".fixed-top">
 
     <!-- Line of Preloader page -->
     <div id="preloader">
@@ -26,6 +26,11 @@
 
     <div class="offcanvas offcanvas-start header-offcanvas slide" tabindex="-1" id="offcanvasResponsive">
         <div class="offcanvas-header">
+            <div class="appearance">
+                <div class="light-dark" id="button-change1">
+                    <i class="fas fa-moon" id="icon-change"></i>
+                </div>
+            </div>
             <button type="button" class="btn-close me-2 btn-close-white" data-bs-dismiss="offcanvas"
                 data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
         </div>
@@ -69,7 +74,7 @@
     <!-- Content page -->
     <div data-aos="fade" data-aos-delay="1000">
 
-        <header class="navbar navbar-expand-lg navbar-dark fixed-top" id="header">
+        <header class="navbar navbar-expand-lg navbar-dark fixed-top transparent" id="header">
             <button class="ms-2 navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
                 <span class="navbar-toggler-icon navbar-toggler-white"></span>
@@ -95,6 +100,11 @@
                     <li class="nav-item px-1">
                         <a href="#Our-clients" class="nav-link">Nuestros clientes</a>
                     </li>
+                    <li class="nav-item px-1 appearance">
+                        <div class="light-dark" id="button-change2">
+                            <i class="fas fa-moon" id="icon-change"></i>
+                        </div>
+                    </li>
                     <!--
                     <li class="nav-item px-1">
                         <a href="#Contact" class="nav-link">Contactanos</a>
@@ -103,6 +113,7 @@
                 </ul>
             </div>
         </header>
+
 
         <main>
             <section id="Home" class="section show">
@@ -126,8 +137,8 @@
                     </div>
                 </div>
             </section>
-
-            <section id="About-us" class="section title-section py-5" data-title="title-about-us">
+            
+            <section id="About-us" class="section title-section py-5 change-section" data-title="title-about-us">
                 <div class="text-center">
                     <h2 class="title" id="title-about-us">SOBRE NOSOTROS</h2>
                 </div>
@@ -175,14 +186,11 @@
                                                         class="img-fluid rounded-circle img-face">
                                                 </div>
                                                 <div class="card-body text-center pb-2">
-                                                    <h5 class="card-title fw-bold">Johan Orlando Daza Amaya</h5>
-                                                    <p class="card-subtitle work-pos fw-bold fst-italic">CEO, CO-Founder
+                                                    <p class="card-title fw-bold">Johan Orlando Daza Amaya</p>
+                                                    <p class="card-subtitle work-pos">CEO, CO-Founder
                                                     </p>
                                                 </div>
                                             </div>
-                                            <svg viewBox="0 0 100 100">
-                                                <rect x="1" y="1" width="99" height="98" />
-                                            </svg>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="card border-0">
@@ -191,14 +199,11 @@
                                                         class="img-fluid rounded-circle img-face">
                                                 </div>
                                                 <div class="card-body text-center pb-2">
-                                                    <h5 class="card-title fw-bold">Christian Andres Acosta Cardenas</h5>
-                                                    <p class="card-subtitle work-pos fw-bold fst-italic">CO-Founder,
+                                                    <p class="card-title fw-bold">Christian Andres Acosta Cardenas</d>
+                                                    <p class="card-subtitle work-pos">CO-Founder,
                                                         Full Stack Developer</p>
                                                 </div>
                                             </div>
-                                            <svg viewBox="0 0 100 100">
-                                                <rect x="1" y="1" width="99" height="98" />
-                                            </svg>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="card border-0">
@@ -207,13 +212,10 @@
                                                         class="img-fluid rounded-circle img-face">
                                                 </div>
                                                 <div class="card-body text-center pb-2">
-                                                    <h5 class="card-title fw-bold">Johan Sebastian Osorio Perea</h5>
-                                                    <p class="card-subtitle work-pos fw-bold fst-italic">Designer</p>
+                                                    <p class="card-title fw-bold">Johan Sebastian Osorio Perea</p>
+                                                    <p class="card-subtitle work-pos">Designer</p>
                                                 </div>
                                             </div>
-                                            <svg viewBox="0 0 100 100">
-                                                <rect x="1" y="1" width="99" height="98" />
-                                            </svg>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="card border-0">
@@ -222,13 +224,10 @@
                                                         class="img-fluid rounded-circle img-face">
                                                 </div>
                                                 <div class="card-body text-center pb-2">
-                                                    <h5 class="card-title fw-bold">Carlos Alexander Gutierrez Marin</h5>
-                                                    <p class="card-subtitle work-pos fw-bold fst-italic">Designer</p>
+                                                    <p class="card-title fw-bold">Carlos Alexander Gutierrez Marin</p>
+                                                    <p class="card-subtitle work-pos">Designer</p>
                                                 </div>
                                             </div>
-                                            <svg viewBox="0 0 100 100">
-                                                <rect x="1" y="1" width="99" height="98" />
-                                            </svg>
                                         </div>
                                     </div>
                                     <div class="pagination-space"></div>
@@ -239,7 +238,8 @@
                     </div>
                 </div>
             </section>
-            <section id="Service-us" class="section py-5 title-section" data-title="title-service-us">
+
+            <section id="Service-us" class="section py-5 title-section change-section" data-title="title-service-us">
                 <div class="text-center">
                     <h2 class="title" id="title-service-us">SERVICIOS</h2>
                 </div>
@@ -369,31 +369,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- <section id="Our-portfolio" class="section py-5">
-                <h2 class="text-center title">NUESTROS PORTAFOLIO</h2>
-
-                <div class="line-title pt-2 pb-3">
-                    <hr class="border-2 border-black animated-fliter m-0">
-                </div>
-
-                <div class="container pt-4">
-                    <div class="container-image-collage justify-content-center">
-                        <div class="box-image">
-                            <img class="img-fluid" src="/source/Fondo_Inicial.jpg" alt="Imagen 1">
-                        </div>
-                        <div class="box-image">
-                            <img class="img-fluid" src="/source/Fondo_Inicial.jpg" alt="Imagen 2">
-                        </div>
-                        <div class="box-image">
-                            <img class="img-fluid" src="/source/Fondo_Inicial.jpg" alt="Imagen 1">
-                        </div>
-                        <div class="box-image">
-                            <img class="img-fluid" src="/source/Fondo_Inicial.jpg" alt="Imagen 2">
-                        </div>
-                    </div>
-                </div>
-            </section> -->
+            
             <section id="Our-clients" class="section py-5 title-section" data-title="title-our-clients">
                 <div class="text-center">
                     <h2 class="title" id="title-our-clients">NUESTROS CLIENTES</h2>
@@ -461,6 +437,7 @@
                     </div>
                 </div>
             </section>
+
             <section id="Contact" class="section py-5 title-section" data-title="title-contact">
                 <div class="text-center">
                     <h2 class="title" id="title-contact">CONTACTANOS</h2>
@@ -576,12 +553,13 @@
                     <br>
                 </p>
             </div>
-
         </footer>
+
     </div>
 
     <!-- SCRIPTS -->
     <script src="js/main.js"></script>
+    <script src="js/change_mode.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -598,7 +576,7 @@
                 dynamicBullets: true,
             },
             autoplay: {
-                delay: 5500,
+                delay: 550000,
                 disableOnInteraction: false,
             },
             breakpoints: {

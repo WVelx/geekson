@@ -3,6 +3,7 @@
  *  ------------------------------------------------------------------
  *
  *  # Root
+ *  # Animation
  *  # Preloader
  *  # Body
  *  # Header
@@ -27,93 +28,61 @@
 /* ===================================================================
  * # Root
  * ------------------------------------------------------------------- */
+
+ *{
+  transition: all 0.15s ease-in-out;
+}
+
 :root {
   scroll-behavior: smooth;
 
-  --black: #212529;
+  --black: #000000;
+  
   --purple: #5E17EB;
+  --dark-purple: #1e1c22;
+  --gray-purple: #2a2a35;
+
   --white: #ffffff;
-  --gray_white: #dddddd;
+  --gray_white: #f3f3f3;
+
   --gray: #969696;
   --darkgray: #303030;
+
+  /* MODE NIGHT
+  
+  --background-color: var(--dark-purple);
+  --background-content: var(--gray-purple);
+
+  --title-text-color: var(--white);
+  --text-color: var(--gray_white);
+  --shadow-text: var(--purple);
+  --line-color: var(--white);
+  
+    MODE DAY
+    
+  --background-color: var(--white);
+  --background-content: var(--gray_white);
+
+  --title-text-color: var(--black);
+  --text-color: var(--dark-purple);
+  --shadow-text: var(--white);
+  --line-color: var(--black);
+
+    
+  */
+
+  --background-color: var(--white);
+  --background-content: var(--gray_white);
+
+  --title-text-color: var(--black);
+  --text-color: var(--dark-purple);
+  --shadow-text: var(--white);
+  --line-color: var(--black);
 }
 
 /* ===================================================================
-* # Preloader
-* ------------------------------------------------------------------- */
-#preloader {
-  display: flex;
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 99999;
-}
-
-#preloader:before,
-#preloader:after {
-  content: "";
-  background-color: var(--black);
-  position: absolute;
-  inset: 0;
-  width: 50%;
-  height: 100%;
-  transition: all 0.2s ease 0s;
-  z-index: -1;
-}
-
-#preloader:after {
-  left: auto;
-  right: 0;
-}
-
-#preloader .line {
-  position: relative;
-  overflow: hidden;
-  margin: auto;
-  width: 1px;
-  height: 280px;
-  transition: all 0.3s ease 0s;
-}
-
-#preloader .line:before {
-  content: "";
-  position: absolute;
-  background-color: #fff;
-  left: 0;
-  top: 50%;
-  width: 1px;
-  height: 0%;
-  transform: translateY(-50%);
-  animation: lineincrease 600ms ease-in-out 0s forwards;
-}
-
-#preloader .line:after {
-  content: "";
-  position: absolute;
-  background-color: #999;
-  left: 0;
-  top: 0;
-  width: 1px;
-  height: 100%;
-  transform: translateY(-100%);
-  animation: linemove 600ms linear 0s infinite;
-  animation-delay: 1000ms;
-}
-
-#preloader.loaded .line {
-  opacity: 0;
-  height: 100% !important;
-}
-
-#preloader.loaded .line:after {
-  opacity: 0;
-}
-
-#preloader.loaded:before,
-#preloader.loaded:after {
-  animation: preloaderfinish 200ms ease-in-out 300ms forwards;
-}
+ * # Animation
+ * ------------------------------------------------------------------- */
 
 @keyframes lineincrease {
   0% {
@@ -155,20 +124,140 @@
   }
 }
 
-/* ===================================================================
-* # Body
-* ------------------------------------------------------------------- */
+@keyframes fliter {
+  0% {
+    opacity: 1;
+  }
 
-body {
-  overflow-x: hidden;
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
-.title {
-  font-size: 6vh;
-  font-weight: bold;
+/* ===================================================================
+ * # Scrollbar custom
+ * ------------------------------------------------------------------- */
+body {
+  overflow: overlay;
+  background-color: var(--background-color) !important;
 
-  display: inline-block !important;
-  margin: 0;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--gray);
+  border-radius: 10px;
+}
+
+/* ===================================================================
+* # Preloader
+* ------------------------------------------------------------------- */
+#preloader {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+}
+
+#preloader:before,
+#preloader:after {
+  content: "";
+  background-color: var(--black);
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  height: 100%;
+  transition: all 0.2s ease 0s !important;
+  z-index: -1;
+}
+
+#preloader:after {
+  left: auto;
+  right: 0;
+}
+
+#preloader .line {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 1px;
+  height: 280px;
+  transition: all 0.3s ease 0s !important;
+}
+
+#preloader .line:before {
+  content: "";
+  position: absolute;
+  background-color: var(--white);
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 0%;
+  transform: translateY(-50%);
+  animation: lineincrease 600ms ease-in-out 0s forwards;
+}
+
+#preloader .line:after {
+  content: "";
+  position: absolute;
+  background-color: var(--gray);
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateY(-100%);
+  animation: linemove 600ms linear 0s infinite;
+  animation-delay: 1000ms;
+}
+
+#preloader.loaded .line {
+  opacity: 0;
+  height: 100% !important;
+}
+
+#preloader.loaded .line:after {
+  opacity: 0;
+}
+
+#preloader.loaded:before,
+#preloader.loaded:after {
+  animation: preloaderfinish 200ms ease-in-out 300ms forwards;
+}
+
+/* ===================================================================
+* # Change Dark
+* ------------------------------------------------------------------- */
+
+.change-section{
+  color: var(--text-color) !important;
+  background: var(--background-color) !important;
+}
+
+h1, h2{
+  text-shadow:
+        1px -1px 0 var(--purple),
+        -1px 1px 0 var(--purple),
+        0.5px  0.5px 0 var(--purple) !important;
+}
+
+h2{
+  text-shadow:
+        1px -1px 0 var(--shadow-text),
+        -1px 1px 0 var(--shadow-text),
+        0.2px  0.2px 0 var(--shadow-text) !important;
+}
+
+h1, h2, h3, h4, h5{
+  color: var(--title-text-color);
 }
 
 .line-title {
@@ -185,23 +274,50 @@ body {
   animation: typewriter 2s steps(48, end);
 }
 
-@keyframes fliter {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.2;
-  }
-
-  100% {
-    opacity: 1;
-  }
+.animated-fliter {
+  animation: fliter 3s ease infinite;
+  color: var(--line-color);
 }
 
-.animated-fliter {
-  animation: fliter 4s ease infinite;
-  color: var(--purple);
+.swiper-slide {
+  background: var(--background-content) !important;
+}
+
+.card{
+  color: var(--text-color) !important;
+  background: transparent !important;
+}
+
+.card-title{
+  font-size: 23px;
+}
+
+.swiper-pagination-bullet{
+  width: 9px !important;
+  height: 9px !important;
+  background: var(--title-text-color) !important;
+}
+
+.swiper-pagination-employeed .swiper-pagination-bullet-active-main:hover {
+  transition: background-color 0.45s ease-in-out !important;
+  background-color: var(--text-color) !important;
+}
+
+.swiper-pagination-clients .swiper-pagination-bullet-active-main:hover {
+  transition: background-color 0.45s ease-in-out !important;
+  background-color: var(--text-color) !important;
+}
+
+/* ===================================================================
+* # Body
+* ------------------------------------------------------------------- */
+
+.title {
+  font-size: 6vh;
+  font-weight: bold;
+
+  display: inline-block !important;
+  margin: 0;
 }
 
 .animated-fliter-white{
@@ -214,23 +330,46 @@ body {
 * ------------------------------------------------------------------- */
 
 header {
-  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out !important;
 
   color: var(--white);
 }
 
+.appearance .light-dark{
+  align-items: center;
+  color: var(--white);
+  
+  height: 100%;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  margin: 0 10px;
+  border-radius: 2px;
+  background-color: var(--gray-purple);
+  opacity: 0.85;
+  cursor: pointer;
+  transition: 0.5s ease-in-out !important;
+}
+
+.appearance .light-dark:hover{
+  opacity: 1.3;
+}
+
 header.transparent {
+  color: var(--white);
   background-color: transparent !important;
 }
 
 header.dark {
-  background-color: black;
+  color: var(--white);
+  background-color: var(--black);
 }
 
 a.nav-link {
   color: var(--white) !important;
   position: relative;
-  transition: border-bottom 0.4s ease;
+  transition: border-bottom 0.4s ease !important;
 }
 
 a.nav-link::after {
@@ -241,7 +380,7 @@ a.nav-link::after {
   width: 0;
   height: 3px;
   background-color: var(--purple);
-  transition: width 0.45s ease;
+  transition: width 0.45s ease !important;
 }
 
 a.nav-link:hover::after {
@@ -257,11 +396,11 @@ a.nav-link:hover::after {
 }
 
 .offcanvas.slide {
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out !important;
 }
 
 .offcanvas.show {
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out !important;
 }
 
 .icon-logo {
@@ -293,6 +432,18 @@ a.nav-link:hover::after {
   font-size: 2rem;
 }
 
+.offcanvas-header .appearance .light-dark{
+  margin: 0 !important;
+  line-height: 40px;
+}
+
+.offcanvas-header .btn-close{
+  line-height: 40px !important;
+  opacity: 0.85;
+  cursor: pointer;
+  transition: 0.5s ease-in-out !important;
+}
+
 /* ===================================================================
 * # Section
 * ------------------------------------------------------------------- */
@@ -302,14 +453,14 @@ section {
 }
 
 .section-dark {
-  background-color: var(--black);
+  background-color: var(--black-mate);
   color: var(--white);
 }
 
 .section {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1s ease, transform 0.75s ease;
+  transition: opacity 1s ease, transform 0.75s ease !important;
 }
 
 .section.show {
@@ -323,17 +474,8 @@ section {
   min-height: 100vh;
   width: 100%;
   position: relative;
-
   background-color: var(--black);
-  /*
-  background: linear-gradient(rgb(33, 37, 41),
-      rgba(94, 23, 235, 0.2)),
-    url(../source/Fondo_Inicial.jpg);
-  background-size: cover;
-  background-position: center center;
-  */
-
-  color: var(--white);
+  color: var(--white) !important;
   vertical-align: middle;
 }
 
@@ -386,13 +528,13 @@ section {
   height: 100%;
   transform: scaleY(1);
   transform-origin: bottom;
-  transition: transform 0.25s;
+  transition: transform 0.25s !important;
 }
 
 .btn-home-contact:hover span:nth-child(1){
   transform: scaleY(0);
   transform-origin: top;
-  transition: transform 0.25s;
+  transition: transform 0.25s !important;
 }
 
 .btn-home-contact span:nth-child(2){
@@ -402,15 +544,15 @@ section {
   height: 1px;
   transform: scaleX(1);
   transform-origin: left;
-  transition: transform 0.25s;
-  transition-delay: 0.25s;
+  transition: transform 0.25s !important;
+  transition-delay: 0.25s !important;
 }
 
 .btn-home-contact:hover span:nth-child(2){
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 0.25s;
-  transition-delay: 0.25s;
+  transition: transform 0.25s !important;
+  transition-delay: 0.25s !important;
 }
 
 .btn-home-contact span:nth-child(3){
@@ -420,15 +562,15 @@ section {
   height: 100%;
   transform: scaleY(1);
   transform-origin: top;
-  transition: transform 0.25s;
-  transition-delay: 0.5s;
+  transition: transform 0.25s !important;
+  transition-delay: 0.5s !important;
 }
 
 .btn-home-contact:hover span:nth-child(3){
   transform: scaleY(0);
   transform-origin: bottom;
-  transition: transform 0.25s;
-  transition-delay: 0.5s;
+  transition: transform 0.25s !important;
+  transition-delay: 0.5s !important;
 }
 
 .btn-home-contact span:nth-child(4){
@@ -438,22 +580,22 @@ section {
   height: 1px;
   transform: scaleX(1);
   transform-origin: right;
-  transition: transform 0.25s;
-  transition-delay: 0.75s;
+  transition: transform 0.25s !important;
+  transition-delay: 0.75s !important;
 }
 
 .btn-home-contact:hover span:nth-child(4){
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.25s;
-  transition-delay: 0.75s;
+  transition: transform 0.25s !important;
+  transition-delay: 0.75s !important;
 }
 
 .btn-home-contact:hover{
   background: var(--white);
   color: var(--purple);
-  transition: 0.5s;
-  transition-delay: 1s;
+  transition: 0.5s !important;
+  transition-delay: 1s !important;
 }
 
 /* ## About-us */
@@ -467,50 +609,21 @@ section {
   height: 360px !important;
 }
 
-svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-
-  position: absolute;
-  left: 0;
-  top: 0;
-  fill: none;
-  stroke: var(--purple);
-  stroke-dasharray: 110 480;
-  stroke-dashoffset: 110;
-  transition: 1s ease-in-out;
-}
-
-.swiper-slide:hover {
-  transition: 1s ease-in-out;
-}
-
-.swiper-slide:hover svg {
-  stroke-dashoffset: -480;
-}
-
-.swiper-pagination-employeed .swiper-pagination-bullet-active-main {
-  background-color: var(--purple) !important;
+.swiper-pagination-employeed .swiper-pagination-bullet {
   animation: fliter 4s ease infinite;
 }
 
+.swiper-pagination-employeed .swiper-pagination-bullet-active-main{
+  background-color: var(--purple) !important;
+}
+
 .swiper-pagination-employeed .swiper-pagination-bullet-active-main:hover {
-  transition: 0.45s ease-in-out;
-  background-color: var(--black) !important;
+  transition: background-color 0.45s ease-in-out !important;
+  background-color: var(--text-color) !important;
 }
 
 .pagination-space {
   height: 40px;
-}
-
-.icon-white {
-  color: var(--purple);
-}
-
-.icon-white:hover {
-  transition: 0.45s ease-in-out;
-  color: var(--black);
 }
 
 .img-face {
@@ -518,7 +631,12 @@ svg {
 }
 
 .work-pos {
-  color: var(--purple) !important;
+  font-size: 15px;
+  color: var(--text-color) !important;
+
+  text-shadow: 
+        -0.75px -0.75px 0 var(--purple),
+        0.75px -0.75px 0 var(--purple);
 }
 
 /* ## SERVICE */
@@ -555,17 +673,11 @@ svg {
 /* ## OUR-CLIENTS */
 
 .swiper-pagination-clients .swiper-pagination-bullet {
-  background-color: var(--gray);
-}
-
-.swiper-pagination-clients .swiper-pagination-bullet-active-main {
-  background-color: var(--gray_white) !important;
   animation: fliter 4s ease infinite;
 }
 
-.swiper-pagination-clients .swiper-pagination-bullet-active-main:hover {
-  transition: 0.45s ease-in-out;
-  background-color: var(--white) !important;
+.swiper-pagination-clients .swiper-pagination-bullet-active-main {
+  background-color: var(--purple) !important;
 }
 
 .div-info-img {
@@ -592,12 +704,12 @@ svg {
 
 .div-info-img:hover .info-img {
   opacity: 1;
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out !important;
 }
 
 .div-info-img:hover img {
   filter: brightness(40%);
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out !important;
 }
 
 /* ## CONTACT */
@@ -625,8 +737,6 @@ svg {
 
   padding-left: 1vw;
   padding-right: 1vw;
-
-
 }
 
 .div-form {
@@ -636,15 +746,13 @@ svg {
 .form-contact {
   background: transparent !important;
   border: 0px !important;
-  border-bottom: 3px solid var(--black) !important;
-  color: var(--black) !important;
+  border-bottom: 3px solid var(--text-color) !important;
+  color: var(--text-color) !important;
 }
-
-
 
 .form-contact:hover,
 .form-contact:focus {
-  transition: 0.45s ease-in-out;
+  transition: 0.45s ease-in-out !important;
   border-color: var(--purple) !important;
 }
 
@@ -661,7 +769,7 @@ svg {
 .btn-dark:hover,
 .btn-dark:active,
 .btn-dark:focus {
-  transition: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out !important;
   background-color: var(--purple) !important;
   color: var(--white) !important;
 }
@@ -671,33 +779,33 @@ svg {
 * ------------------------------------------------------------------- */
 
 .icon {
-  transition: 0.45s ease-in-out;
+  transition: 0.45s ease-in-out !important;
 }
 
 .icon:hover {
-  transition: 0.45s ease-in-out;
-  font-size: 2.25rem;
-  color: #5E17EB;
+  transition: 0.45s ease-in-out !important;
+  font-size: 110%;
+  color: var(--purple);
 }
 
 .icon2 {
-  color: var(--black);
+  color: var(--text-color);
 }
 
 .icon2:hover {
-  transition: 0.45s ease-in-out;
-  font-size: 7.5vh;
-  color: #5E17EB;
+  transition: 0.45s ease-in-out !important;
+  font-size: 110%;;
+  color: var(--purple);
 }
 
 .icon3 {
-  transition: 0.45s ease-in-out;
-  color: #8345ff;
+  transition: 0.45s ease-in-out !important;
+  color: var(--purple);
 }
 
 .icon4:hover {
-  transition: 0.30s ease-in-out;
-  color: #5E17EB;
+  transition: 0.30s ease-in-out !important;
+  color: var(--purple);
 }
 
 /* ===================================================================
@@ -705,7 +813,7 @@ svg {
 * ------------------------------------------------------------------- */
 
 footer {
-  background-color: black;
+  background-color: var(--black);
   color: var(--white);
 }
 
@@ -722,7 +830,6 @@ footer {
   color: var(--white)
 }
 
-
 @media only screen and (max-width: 1000px) {
   .line-home{
     padding-right: 35vw;
@@ -731,18 +838,9 @@ footer {
   .name-company {
     font-size: 5vh;
   }
-
-  .swiper-wrapper {
-    height: 340px !important;
-  }
-
   .title {
     font-size: 3.5vh;
     font-weight: bold;
-  }
-
-  .swiper-slide-active {
-    box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0);
   }
 
   .img-face {
@@ -763,11 +861,6 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-  .swiper-wrapper {
-    height: 320px !important;
-  }
-
-
   .div-follow {
     padding-top: 0.5rem;
     border-right: 0px;
