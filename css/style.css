@@ -290,9 +290,7 @@ h2, h3, h4, h5{
 .typewrite {
   font-size: 2.25rem;
   font-weight: 900;
-  color: transparent;
-
-  -webkit-text-stroke: 1.5px var(--white);
+  color: var(--purple);
 }
 
 .title {
@@ -548,13 +546,35 @@ section {
   min-height: 100vh;
   width: 100%;
   position: relative;
-  background-color: var(--black);
+  color: var(--white) !important;
+  vertical-align: middle; 
+  background: linear-gradient(rgb(0, 0, 0),
+      rgba(85, 0, 255, 0.274)),
+    url(../source/home1.jpg);
+  background-size: cover;
+  background-position: center center;
+  
+}
+
+#Home2 {
+  min-height: 50vh;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(rgb(0, 0, 0),
+  rgba(85, 0, 255, 0.274)),
+url(../source/home2.jpg);
   color: var(--white) !important;
   vertical-align: middle;
 }
 
 .content-home {
   padding-top: 35vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+.content-home2 {
+  padding-top: 25vh;
+  padding-bottom: 25vh;
   padding-left: 10vw;
   padding-right: 10vw;
 }
@@ -780,8 +800,6 @@ section {
   height: 100%;
   border-left: 4px solid var(--text-color) !important;
   border-radius: 0.375rem !important;
-
-  background: var(--background-content) !important;
   margin: 10px;
 }
 
@@ -791,12 +809,12 @@ section {
 
 .card-service:hover{
   border-left: 4px solid var(--purple) !important;
-  transition: border-left 0.75s ease-in-out;
+  transition: border-left 0.2s ease-in-out;
 }
 
 .card-service:hover .card-img-service{
   color: var(--purple) !important;
-  transition: color 0.75s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 .card-img-service{
@@ -828,9 +846,8 @@ section {
 .card-portfolio{
   border-top: 4px solid var(--purple) !important;
   border-radius: 0.375rem !important;
-
-  background: var(--background-content) !important;
-  margin: 15px;
+  padding: 1%;
+  margin: 1%;
 }
 
 .img-project{
@@ -1111,6 +1128,27 @@ footer {
     padding-bottom: 1rem;
   }
 }
+.inheritcolor{
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+.inheritcolor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0); /* Cambia el valor del canal alfa (0.5) para la transparencia */
+  z-index: 1;
+  transition: background-color 0.3s; /* Agrega una transición de color suave */
+}
+
+.inheritcolor:hover::before {
+  background-color: #5e17eb3a; /* Cambia el valor del canal alfa (0.7) para la transparencia en hover */
+}
 
 .displayflex {
   display: flex;
@@ -1118,6 +1156,10 @@ footer {
 
 .colorBase {
   color: #5E17EB;
+}
+
+.b8 {
+  font-family: '8BIT WONDER', sans-serif !important;
 }
 
 .font1-5 {
@@ -1140,6 +1182,7 @@ footer {
   text-align: justify;
 }
 
+
 .padding1 {
   padding: 1%;
 }
@@ -1150,4 +1193,7 @@ footer {
 
 .margin1 {
   margin: 1%;
+}
+.margin4 {
+  margin: 4%;
 }
