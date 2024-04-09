@@ -6,18 +6,18 @@ const icon_night = document.querySelectorAll("#icon-change");
 const colors = {
   night: {
     "--background-color": "var(--dark-purple)",
-    "--background-content": "var(--gray-purple)",
+    "--background-content": "var(--darkgray)",
     "--title-text-color": "var(--white)",
     "--text-color": "var(--gray_white)",
-    "--shadow-text": "var(--purple)",
+    "--shadow-text": "var(--purple-5)",
     "--line-color": "var(--white)",
   },
   day: {
     "--background-color": "var(--white)",
-    "--background-content": "var(--gray_white)",
+    "--background-content": "var(--lightgray)",
     "--title-text-color": "var(--black)",
-    "--text-color": "var(--dark-purple)",
-    "--shadow-text": "var(--white)",
+    "--text-color": "var(--gray-black)",
+    "--shadow-text": "var(--purple-5)",
     "--line-color": "var(--black)",
   },
 };

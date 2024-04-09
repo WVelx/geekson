@@ -10,7 +10,7 @@ var swiper_employed = new Swiper(".swiper-employeed", {
         dynamicBullets: true,
     },
     autoplay: {
-        delay: 550000,
+        delay: 7500,
         disableOnInteraction: false,
     },
     breakpoints: {

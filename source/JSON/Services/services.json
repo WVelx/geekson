@@ -1,0 +1,50 @@
+[
+    {
+        "servicesID": 1,
+        "title": "Desarrollo Web",
+        "description": "Desarrollamos para tu negocio cualquier tipo de aplicación o pagina web a medida.",
+        "classImage": "fa-solid fa-laptop-code"
+    },
+    {
+        "servicesID": 2,
+        "title": "Inteligencia de Negocios",
+        "description": "Analiza el estado de tu empresa y toma decisiones con nuestras soluciones de inteligencia de negocios.",
+        "classImage": "fa-solid fa-chart-pie"
+    },
+    {
+        "servicesID": 3,
+        "title": "Correo Corporativo",
+        "description": "Genera mas confianza y profesionalismo en tu empresa con tu correo corporativo.",
+        "classImage": "fa-solid fa-envelope"
+    },
+    {
+        "servicesID": 4,
+        "title": "SEO",
+        "description": "Mejoramos el posicionamiento de tu sitio web en los motores de búsqueda y asi mejorar la visibilidad de tu negocio.",
+        "classImage": "fa-solid fa-magnifying-glass-dollar"
+    },
+    {
+        "servicesID": 5,
+        "title": "ChatBots",
+        "description": "Automatizamos los chats de WhatsApp para simplificar las interacciones con tus clientes y mejorar la satisfacción del.",
+        "classImage": "fa-solid fa-robot"
+    },
+    {
+        "servicesID": 6,
+        "title": "Branding",
+        "description": "Desarrollamos una identidad visual a tu negocio que destaque sobre los demás y asi posicionar tu marca por encima de todas.",
+        "classImage": "fa-solid fa-pen-ruler"
+    },
+    {
+        "servicesID": 7,
+        "title": "Edición y producción Audiovisual",
+        "description": "Elevamos la calidad e impacto de tus proyectos mediante la producción de contenido multimedia para los medios digitales.",
+        "classImage": "fa-solid fa-photo-film"
+    },
+    {
+        "servicesID": 8,
+        "title": "Gestión de Redes Sociales",
+        "description": "Creamos y ejecutamos estrategias para que tus redes sociales generen resultados tangibles para tu negocio.",
+        "classImage": "fa-solid fa-thumbs-up"
+    }
+]

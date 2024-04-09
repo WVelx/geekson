@@ -32,51 +32,65 @@
  * ------------------------------------------------------------------- */
 
  *{
-  transition: all 0.15s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 :root {
   scroll-behavior: smooth;
 
   --black: #000000;
-  
-  --purple: #5E17EB;
-  --dark-purple: #1e1c22;
-  --gray-purple: #2a2a35;
+  --gray-black: #2b2b2b;
 
   --white: #ffffff;
-  --gray_white: #f3f3f3;
+  --gray_white: #dadada;
+
+  --purple: #894ffb;
+  --purple-5: rgba(95, 25, 235, 0.5);
+  --purple-1: rgba(95, 25, 235, 0.075);
+  --dark-purple: #0f0f0f;
 
   --gray: #969696;
-  --darkgray: #303030;
+
+  --lightgray: rgba(0, 0, 0, 0.15);
+  --darkgray: rgba(255, 255, 255, 0.15);
 
   /* 
     * MODE NIGHT
       --background-color: var(--dark-purple);
-      --background-content: var(--gray-purple);
+      --background-content: var(--darkgray);
 
       --title-text-color: var(--white);
       --text-color: var(--gray_white);
-      --shadow-text: var(--purple);
+      --shadow-text: var(--purple-5);
       --line-color: var(--white);
   
     * MODE DAY
       --background-color: var(--white);
-      --background-content: var(--gray_white);
+      --background-content: var(--lightgray);
 
       --title-text-color: var(--black);
-      --text-color: var(--dark-purple);
-      --shadow-text: var(--white);
+      --text-color: var(--gray-black);
+      --shadow-text: var(--purple-5);
       --line-color: var(--black);
   */
 
   --background-color: var(--white);
-  --background-content: var(--gray_white);
+  --background-content: var(--lightgray);
 
   --title-text-color: var(--black);
-  --text-color: var(--dark-purple);
-  --shadow-text: var(--white);
+  --text-color: var(--gray-black);
+  --shadow-text: var(--purple);
   --line-color: var(--black);
+
+
+
+
+  --d: 2000ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgb(137, 79, 251, 0.4);
+	--c2: rgba(183, 152, 247, 0.01);
 }
 
 /* ===================================================================
@@ -135,6 +149,35 @@
   100% {
     opacity: 1;
   }
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
 }
 
 /* ===================================================================
@@ -234,10 +277,6 @@
   background: var(--background-color) !important;
 }
 
-.swiper-slide {
-  background: var(--background-content) !important;
-}
-
 .card{
   color: var(--text-color) !important;
   background: transparent !important;
@@ -293,21 +332,6 @@ h2, h3, h4, h5{
   color: var(--purple);
 }
 
-.title {
-  font-size: 2.8rem;
-  font-weight: 700;
-}
-
-.sub-title{
-  font-size: 2.1rem;
-  font-weight: bold;
-}
-
-.text-content{
-  font-size: 1.25rem;
-  line-height: 1.8rem;
-}
-
 a{
   text-decoration: none !important;
 }
@@ -339,7 +363,6 @@ body {
 * ------------------------------------------------------------------- */
 
 header {
-  opacity: 0.85;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out !important;
 
   color: var(--white);
@@ -437,7 +460,7 @@ a.nav-link:hover::after {
 
 .logo-header {
   height: 50px;
-  max-width: 85%;
+  max-width: 100%;
 
   vertical-align: middle;
   border-style: none;
@@ -761,6 +784,41 @@ url(../source/home2.jpg);
   height: 100%;
 }
 
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+.swiper-work{
+  border: 0.35rem solid transparent;
+}
+
+.swiper-work:hover{
+  border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.swiper-work:hover > .card > .card-img-top > img{
+  transform: scale(1.075);
+}
+
+.card-img-top > img{
+  object-fit: contain;
+}
+
 .swiper-wrapper {
   height: 360px !important;
 }
@@ -797,9 +855,11 @@ url(../source/home2.jpg);
 
 /* ## SERVICE */
 .card-service{
-  height: 100%;
-  border-left: 4px solid var(--text-color) !important;
-  border-radius: 0.375rem !important;
+  display: flex;
+  min-height: 100%;
+  border: 1px solid var(--background-content);
+  border-left: 4px solid var(--text-color);
+  border-radius: 0.375rem;
   margin: 10px;
 }
 
@@ -815,6 +875,11 @@ url(../source/home2.jpg);
 .card-service:hover .card-img-service{
   color: var(--purple) !important;
   transition: color 0.2s ease-in-out;
+}
+
+.body-service{
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
 }
 
 .card-img-service{
@@ -836,24 +901,59 @@ url(../source/home2.jpg);
 
 .desc-service{
   height: 65%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* ## OUR-PROYECT */
 .card-portfolio{
-  border-top: 4px solid var(--purple) !important;
-  border-radius: 0.375rem !important;
+  border: 1px solid var(--background-content);
+  border-top: 4px solid var(--line-color);
+  color: var(--text-color);
+  border-radius: 0.375rem;
   padding: 1%;
   margin: 1%;
+}
+
+.card-portfolio:hover{
+  border-top-color: var(--purple);
+  background-color: var(--purple-1);
+  transition: 0.5s ease-in-out;
+}
+
+.card-portfolio:hover > .cont-img > .img-project{
+  transform: scale(1.1);
+}
+
+.cont-img{
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.375rem;
+  display: inline-block;
+}
+
+.cont-img:hover > .overlay-project{
+  top: 0;
 }
 
 .img-project{
   max-width: 100%;
   height: 100%;
-  border-radius: 0.375rem;
+}
+
+.overlay{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: top 0.5s ease-in-out;
+}
+
+.button-overlay{
+  cursor: pointer;
 }
 
 .title-project{
@@ -873,22 +973,6 @@ url(../source/home2.jpg);
   margin: 20px 0px;
 }
 
-.site-project{
-  border: 1px solid var(--text-color);
-  border-radius: 0.35rem;
-  padding: 10px;
-  text-align: center;
-  color: var(--text-color);
-  font-size: 1rem;
-  background: var(--background-color);
-}
-
-.site-project:hover{
-  border: 1px solid var(--purple);
-  background: var(--white);
-  color: var(--purple);
-}
-
 /* ## OUR-CLIENTS */
 
 .swiper-pagination-clients .swiper-pagination-bullet {
@@ -897,6 +981,10 @@ url(../source/home2.jpg);
 
 .swiper-pagination-clients .swiper-pagination-bullet-active-main {
   background-color: var(--purple) !important;
+}
+
+.swiper-slide:hover > .div-info-img > .overlay-clients{
+  top: 0;
 }
 
 .div-info-img {
@@ -910,7 +998,6 @@ url(../source/home2.jpg);
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: transparent !important;
   color: white;
   font-weight: bolder;
   opacity: 0;
@@ -935,11 +1022,6 @@ url(../source/home2.jpg);
 
 .div-follow {
   border-right: 1px solid var(--text-color);
-}
-
-.a-contact {
-  font-size: 2rem;
-  color: var(--white)
 }
 
 .div-form-contact {
@@ -1041,12 +1123,96 @@ footer {
   border-style: none;
 }
 
-.a-footer {
-  font-size: 2rem;
-  color: var(--white)
+/* ##SCREEN 2XL*/
+@media only screen and (min-width: 1280px){
+  .font-company{
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .font-title{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .font-subtitle{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .font-semisubtitle{
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  .font-normal{
+    font-size: 1.125rem;
+    line-height: 1.5rem; 
+  }
+
+  .font-title-card{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .font-card{
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+
+  .icon-big{
+    font-size: 3rem;
+  }
+
+  .icon-medium{
+    font-size: 2.25rem;
+  }
+
+  .icon-small{
+    font-size: 1.875rem;
+  }
 }
 
-@media only screen and (max-width: 1000px) {
+/* ##SCREEN XL*/
+@media only screen and (max-width: 1280px) {
+  .font-company{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .font-title{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .font-subtitle{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .font-semisubtitle{
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  .font-normal{
+    font-size: 1rem;
+    line-height: 1.5rem; 
+  }
+
+  .font-title-card{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .font-card{
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+
+
+
+
   .img-face {
     height: 25vh !important;
   }
@@ -1073,11 +1239,62 @@ footer {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .name-company {
+/* ##SCREEN LG*/
+@media only screen and (max-width: 1024px) {
+
+  .font-company{
     font-size: 3rem;
-    font-weight: 900;
-    color: var(--white);
+    line-height: 1;
+  }
+
+  .font-title{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .font-subtitle{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .font-semisubtitle{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .font-normal{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .font-title-card{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  .font-card{
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  .icon-big{
+    font-size: 2.25rem;
+  }
+
+  .icon-medium{
+    font-size: 1.875rem;
+  }
+
+  .icon-small{
+    font-size: 1.5rem;
+  }
+
+
+
+
+  .center-md{
+    flex: 1;
+    text-align: center;
   }
   
   .typewrite {
@@ -1126,8 +1343,103 @@ footer {
 
     padding-top: 1rem;
     padding-bottom: 1rem;
+  } 
+}
+
+/* ##SCREEN MD*/
+@media only screen and (max-width: 768px){
+  .font-company{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .font-title{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .font-subtitle{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .font-semisubtitle{
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+
+  .font-normal{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .font-title-card{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  .font-card{
+    font-size: 1rem;
+    line-height: 1.25rem;
   }
 }
+
+/* ##SCREEN SM*/
+@media only screen and (max-width: 640px){
+  .font-company{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .font-title{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .font-subtitle{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .font-semisubtitle{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .font-normal{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .font-title-card{
+    font-size: 1.125rem;
+    line-height: 1.25rem;
+  }
+
+  .font-card{
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
+
+  .icon-big{
+    font-size: 1.875rem;
+  }
+
+  .icon-medium{
+    font-size: 1.5rem;
+  }
+
+  .icon-small{
+    font-size: 1.25rem; 
+  }
+
+  .logo-header{
+    max-height: 90%;
+    max-width: 75%;
+  }
+}
+
+/*
 .inheritcolor{
   color: inherit;
   position: relative;
@@ -1141,14 +1453,15 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(240, 240, 240, 0); /* Cambia el valor del canal alfa (0.5) para la transparencia */
+  background-color: rgba(240, 240, 240, 0); 
   z-index: 1;
-  transition: background-color 0.3s; /* Agrega una transición de color suave */
+  transition: background-color 0.3s;
 }
 
 .inheritcolor:hover::before {
-  background-color: #5e17eb3a; /* Cambia el valor del canal alfa (0.7) para la transparencia en hover */
+  background-color: #5e17eb3a;
 }
+*/
 
 .displayflex {
   display: flex;
@@ -1196,4 +1509,79 @@ footer {
 }
 .margin4 {
   margin: 4%;
+}
+
+
+/* Clases de diseño */
+.list-nomark{
+  list-style-type: none;
+}
+
+.font-static-normal{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.font-semibold{
+  font-weight: 600;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
+.font-extrabold{
+  font-weight: 800;
+}
+
+.opacity-6{
+  opacity: 0.6;
+}
+
+.opacity-7{
+  opacity: 0.7;
+}
+
+.opacity-8{
+  opacity: 0.8;
+}
+
+.opacity-9{
+  opacity: 0.9;
+}
+
+.transition-300{
+  transition: all 0.3s ease-in-out;
+}
+
+.transition-500{
+  transition: all 0.5s ease-in-out;
+}
+
+.border-r{
+  border-radius: 0.375rem;
+}
+
+.scale-05:hover{
+  transform: scale(1.05);
+}
+
+.scale-1:hover{
+  transform: scale(1.1);
+}
+
+.color-white{
+  color: var(--white);
+}
+
+.color-purple{
+  color: var(--purple);
+}
+
+.color-black{
+  color: var(--black);
+}
+
+.color-purple-hover:hover{
+  color: var(--purple);
 }
