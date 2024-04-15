@@ -7,15 +7,15 @@ if ($data !== null) {
 
     foreach ($data as $services) {
         $html .= <<<HTML
-        <div class="card-service col-md-5">
+        <div class="card-service border-r col-md-5 d-flex">
         <div class="body-service row">
-            <div class="col-3 card-img-service pe-3">
-                <i class="{$services['classImage']} icon-big"></i>
+            <div class="col-3 card-img-service d-flex justify-content-center align-items-center pe-3">
+                <i class="{$services['classImage']} color-change-import icon-big"></i>
             </div>
             <div class="col ps-3">
-                <h3 class="font-title-card type-service text-center">{$services['title']}</h3>
+                <h3 class="font-title-card color-change-import font-shadow-small text-center">{$services['title']}</h3>
                 <div class="desc-service">
-                    <p class="font-card m-0">{$services['description']}</p>
+                    <p class="font-card color-change-normal m-0">{$services['description']}</p>
                 </div>
             </div>
         </div>

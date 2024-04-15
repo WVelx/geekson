@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "client": "Empresa grande",
+        "image": "source/cara-prueba.png",
+        "link": "#"
+    },
+    {
+        "id": 2,
+        "client": "Empresa grande",
+        "image": "source/cara-prueba.png",
+        "link": "#"
+    },
+    {
+        "id": 3,
+        "client": "Empresa grande",
+        "image": "source/cara-prueba.png",
+        "link": "#"
+    },
+    {
+        "id": 4,
+        "client": "Empresa grande",
+        "image": "source/cara-prueba.png",
+        "link": "#"
+    },
+    {
+        "id": 5,
+        "client": "Empresa grande",
+        "image": "source/cara-prueba.png",
+        "link": "#"
+    }
+]

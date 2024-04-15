@@ -22,7 +22,7 @@
         <div class="line"></div>
     </div>
 
-    <div class="offcanvas offcanvas-start header-offcanvas slide" tabindex="-1" id="offcanvasResponsive">
+    <div class="offcanvas offcanvas-start bg-black slide" tabindex="-1" id="offcanvasResponsive">
         <div class="offcanvas-header">
             <div class="ms-0 row">
                 <div class="col ps-2 light-dark" id="button-change1">
@@ -41,7 +41,7 @@
 
             <div class="container text-center pb-2">
                 <a href="">
-                    <img class="icon-logo" src="source/Icon_Logo.png" alt="">
+                    <img loading="lazy" class="icon-logo" src="source/Icon_Logo.png" alt="logo Geekson Digital extendido">
                 </a>
             </div>
 
@@ -60,11 +60,11 @@
                 </li>
             </ul>
         </div>
-        <div class="mt-auto offcanvas-footer text-center">
-            <p>Derechos de autor &copy; 2024 GeeksonDigital</p>
+        <div class="mt-auto text-center">
+            <p class="color-graywhite">Derechos de autor &copy; 2024 GeeksonDigital</p>
             <ul class="list-inline">
-                <a class="px-2 a-offcanvas" href=""><i class="fa-brands fa-facebook icon a"></i></a>
-                <a class=" px-2 a-offcanvas" href=""><i class="fa-brands fa-whatsapp icon a"></i></a>
+                <a class="px-2 color-white color-purple-hover fa-brands fa-facebook icon-menu scale-1 transition-300" href=""></a>
+                <a class=" px-2 color-white color-purple-hover fa-brands fa-whatsapp icon-menu scale-1 transition-300" href=""></a>
             </ul>
         </div>
     </div>
@@ -80,7 +80,7 @@
 
                 <div class="col-md center-md">
                     <a href="#Home" class="navbar-brand m-0 p-0">
-                        <img class="logo-header" src="source/Logo.png" alt="">
+                        <img loading="lazy" class="logo-header" src="source/Logo.png" alt="logo Geekson Digital extendido">
                     </a>
                 </div>
 
@@ -114,7 +114,6 @@
             </div>
         </header>
 
-
         <main>
             <section id="Home" class="section show">
                 <div class="content-home">
@@ -122,369 +121,225 @@
                     <span class="typewrite b8" data-period="2000" data-type='[ "Somos Creatividad", "Somos Tecnologia", "Somos Innovacion", "Somos Geeks" ]'>
                         <p class="wrap "></p>
                     </span>
-                    <!-- <div class="py-2 row">
-                        <div class="col-sm-auto">
-                            <a href="#Contact" class="btn-home-contact">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                Contáctenos
-                            </a>
-                        </div>
-                        <div class="col-sm-auto">
-                            <a href="#Our-portfolio" class="btn-portfolio">
-                                Proyectos
-                            </a>
-                        </div>
-                    </div> -->
-                    <!-- <div class="line-home">
-                        <hr class="border-3 animated-fliter-white m-0" id="line2">
-                    </div>
-                    <div class="div-contact-home mt-4">
-                        <a class="me-3 icon-home" href="#">
-                            <i class="fa-brands fa-facebook"></i> Facebook</a>
-                        <a class="me-3 icon-home" href="#">
-                            <i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-                    </div> -->
                 </div>
             </section>
 
-            <section id="About-us" class="section title-section py-4 change-section" data-title="title-about-us">
-                <div class="container py-2">
-                    <div class="div_title">
-                        <h2 class="font-title font-bold" id="title-about-us">
-                            < SOBRE NOSOTROS />
-                        </h2>
-                    </div>
+            <div class="container">
+                <section id="About-us" class="py-2 section title-section change-section" data-title="title-about-us">
+                    <div class="pt-4">
+                        <div class="div_title">
+                            <h2 class="font-title color-change-import font-bold font-shadow" id="title-about-us">
+                                < SOBRE NOSOTROS />
+                            </h2>
+                        </div>
 
-                    <div class="line-title">
-                        <hr class="border-2 animated-fliter m-0" id="line1">
-                    </div>
-                </div>
-
-                <div class="container padding1">
-                    <div class="row">
-                        <div class="col-lg">
-                            <div class="row">
-                                <div class="col-lg d-flex align-items-center">
-                                    <div>
-                                        <h3 class="font-subtitle font-bold my-3">¿QUIENES SOMOS?</h5>
-                                            <p class="font-normal">
-                                                Somos una empresa Colombiana apasionada por la tecnología,
-                                                dedicada a ofrecer servicios digitales con los mas altos estándares de
-                                                calidad.
-                                                En <b>Geekson Digital</b> no solo ofrecemos un simple servicio; también
-                                                oportunidades de impulsar
-                                                el crecimiento y éxito empresarial de nuestros clientes, teniendo como base
-                                                la creatividad, experiencia técnica y un enfoque centrado en el cliente.
-                                            </p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 d-flex align-items-center">
-                                    <img class="img-about" src="source/Fondo_Inicial.jpg" alt="">
-                                </div>
-                            </div>
+                        <div class="line-title">
+                            <hr class="border-2 animated-fliter m-0" id="line1">
                         </div>
                     </div>
-                </div>
-                <div class="container padding1">
-                    <div class="row">
+
+                    <div class="pt-4 row">
                         <div class="col-lg">
-                            <h3 class="font-subtitle font-bold my-3">NUESTRO EQUIPO</h3>
-                            <div class="container pt-3">
-                                <div class="swiper swiper-employeed">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide swiper-work">
-                                            <div class="card border-0 m-1">
-                                                <div class="card-img-top justify-content-center d-flex text-center pt-2">
-                                                    <img src="source/cara-prueba.png" class="img-fluid rounded-circle img-face">
-                                                </div>
-                                                <div class="card-body text-center pb-2">
-                                                    <p class="font-title-card fw-bold my-1">Johan Orlando Daza Amaya</p>
-                                                    <p class="font-card work-pos my-1">CEO, CO-Founder
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide swiper-work">
-                                            <div class="card border-0">
-                                                <div class="card-img-top text-center pt-2">
-                                                    <img src="source/cara-prueba.png" class="img-fluid rounded-circle img-face">
-                                                </div>
-                                                <div class="card-body text-center pb-2">
-                                                    <p class="font-title-card fw-bold my-1">Christian Andrés Acosta Cárdenas</d>
-                                                    <p class="font-card work-pos my-1">CO-Founder,
-                                                        IT Lead</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide swiper-work">
-                                            <div class="card border-0">
-                                                <div class="card-img-top text-center pt-2">
-                                                    <img src="source/cara-prueba.png" class="img-fluid rounded-circle img-face">
-                                                </div>
-                                                <div class="card-body text-center pb-2">
-                                                    <p class="font-title-card fw-bold my-1">Johan Sebastian Osorio Perea</p>
-                                                    <p class="font-card work-pos my-1">Designer</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide swiper-work">
-                                            <div class="card border-0">
-                                                <div class="card-img-top text-center pt-2">
-                                                    <img src="source/cara-prueba.png" class="img-fluid rounded-circle img-face">
-                                                </div>
-                                                <div class="card-body text-center pb-2">
-                                                    <p class="font-title-card fw-bold my-1">Mclovin</p>
-                                                    <p class="font-card work-pos my-1">President</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="pagination-space"></div>
-                                    <div class="swiper-pagination swiper-pagination-employeed"></div>
-                                </div>
-                            </div>
+                            <h3 class="font-subtitle color-change-import font-bold mb-3">¿QUIENES SOMOS?</h3>
+                            <p class="font-normal color-change-normal">
+                                Somos una empresa Colombiana apasionada por la tecnología,
+                                dedicada a ofrecer servicios digitales con los mas altos estándares de
+                                calidad.
+                                En <b>Geekson Digital</b> no solo ofrecemos un simple servicio; también
+                                oportunidades de impulsar
+                                el crecimiento y éxito empresarial de nuestros clientes, teniendo como base
+                                la creatividad, experiencia técnica y un enfoque centrado en el cliente.
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img class="img-about border-r" src="source/Fondo_Inicial.jpg" alt="Geekson Digital empresa">
                         </div>
                     </div>
-                </div>
-            </section>
 
-            <section id="Service-us" class="section py-4 title-section change-section" data-title="title-service-us">
-                <div class="container py-2">
-                    <div class="div_title">
-                        <h2 class="font-title font-bold" id="title-service-us">
-                            < SERVICIOS />
-                        </h2>
+                    <div class="pt-4">
+                        <h3 class="font-subtitle color-change-import font-bold mb-3">NUESTRO EQUIPO</h3>
+                        <div class="swiper swiper-employeed">
+                            <div class="swiper-wrapper">
+                                <!-- AGREGAR EMPLEADOS -->
+                                <?php include('./source/JSON/Employed/employed.php'); ?>
+                            </div>
+                            <div class="pagination-space"></div>
+                            <div class="swiper-pagination swiper-pagination-employeed"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="Service-us" class="py-2 section title-section change-section" data-title="title-service-us">
+                    <div class="pt-4">
+                        <div class="div_title">
+                            <h2 class="font-title color-change-import font-bold font-shadow" id="title-service-us">
+                                < SERVICIOS />
+                            </h2>
+                        </div>
+
+                        <div class="line-title">
+                            <hr class="border-2 animated-fliter m-0 " id="line2">
+                        </div>
                     </div>
 
-                    <div class="line-title">
-                        <hr class="border-2 animated-fliter m-0 " id="line2">
-                    </div>
-                </div>
-
-                <div class="container pt-3">
-                    <div class="row justify-content-center mx-1">
+                    <div class="pt-4 row justify-content-center mx-1">
                         <!-- AGREGAR SERVICIOS -->
                         <?php include('./source/JSON/Services/services.php'); ?>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section id="Our-portfolio" class="section py-4 title-section" data-title="title-our-portfolio">
-                <div class="container py-2">
-                    <div class="div_title">
-                        <h2 class="font-title font-bold" id="title-our-portfolio">
-                            < PROYECTOS />
-                        </h2>
+                <section id="Our-portfolio" class="py-2 section title-section" data-title="title-our-portfolio">
+                    <div class="pt-4">
+                        <div class="div_title">
+                            <h2 class="font-title color-change-import font-bold font-shadow" id="title-our-portfolio">
+                                < PROYECTOS />
+                            </h2>
+                        </div>
+
+                        <div class="line-title">
+                            <hr class="border-2  animated-fliter m-0 " id="line3">
+                        </div>
                     </div>
 
-                    <div class="line-title">
-                        <hr class="border-2  animated-fliter m-0 " id="line3">
-                    </div>
-                </div>
-
-                <div class="container pt-3">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6">
-                            <div class="card-portfolio p-3">
-                                <div class="cont-img">
-                                    <img class="img-project" src="/source/Fondo_Inicial.jpg">
-                                    <div class="overlay overlay-project position-absolute">
-                                        <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
+                    <div class="pt-4">
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <div class="card-portfolio border-r p-3 m-2">
+                                    <div class="cont-img border-r position-relative overflow-hidden d-inline-block">
+                                        <img class="img-project" src="/source/Fondo_Inicial.jpg">
+                                        <div class="overlay overlay-project position-absolute">
+                                            <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="font-title-card color-change-import my-2 text-center font-semibold font-shadow-small"> Proyecto de pasatiempo</p>
+                                        <div class="desc-project">
+                                            <p class="font-card color-change-normal m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                                                accumsan tortor magna, in imperdiet nunc molestie sed.</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <p class="font-title-card my-2 title-project text-center font-semibold"> Proyecto de pasatiempo</p>
-                                    <div class="desc-project">
-                                        <p class="font-card m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                                            accumsan tortor magna, in imperdiet nunc molestie sed.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-portfolio border-r p-3 m-2">
+                                    <div class="cont-img border-r position-relative overflow-hidden d-inline-block">
+                                        <img class="img-project" src="/source/Fondo_Inicial.jpg">
+                                        <div class="overlay overlay-project position-absolute">
+                                            <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="font-title-card color-change-import my-2 text-center font-semibold font-shadow-small"> Proyecto de pasatiempo</p>
+                                        <div class="desc-project">
+                                            <p class="font-card color-change-normal m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                                                accumsan tortor magna, in imperdiet nunc molestie sed.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-portfolio border-r p-3 m-2">
+                                    <div class="cont-img border-r position-relative overflow-hidden d-inline-block">
+                                        <img class="img-project" src="/source/Fondo_Inicial.jpg">
+                                        <div class="overlay overlay-project position-absolute">
+                                            <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="font-title-card color-change-import my-2 text-center font-semibold font-shadow-small"> Proyecto de pasatiempo</p>
+                                        <div class="desc-project">
+                                            <p class="font-card color-change-normal m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                                                accumsan tortor magna, in imperdiet nunc molestie sed.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="card-portfolio p-3">
-                                <div class="cont-img">
-                                    <img class="img-project" src="/source/Fondo_Inicial.jpg">
-                                    <div class="overlay overlay-project position-absolute">
-                                        <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
-                                    </div>
+
+                        <div class="text-center pt-4">
+                            <a href="./Projects.php" class="btn btn-dark">Ver Mas </a>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section id="Our-clients" class="py-2 section title-section" data-title="title-our-clients">
+                    <div class="pt-4">
+                        <div class="div_title">
+                            <h2 class="font-title color-change-import font-bold font-shadow" id="title-our-clients">
+                                < CLIENTES />
+                            </h2>
+                        </div>
+
+                        <div class="line-title">
+                            <hr class="border-2  animated-fliter m-0 " id="line4">
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <div class="swiper swiper-clients">
+                            <div class="swiper-wrapper">
+                                <!-- AGREGAR CLIENTES -->
+                                <?php include('./source/JSON/Clients/clients.php'); ?>
+                            </div>
+                            <div class="pagination-space"></div>
+                            <div class="swiper-pagination swiper-pagination-clients"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="Contact" class="py-2 section title-section" data-title="title-contact">
+                    <div class="pt-4">
+                        <div class="div_title">
+                            <h2 class="font-title color-change-import font-bold font-shadow" id="title-contact">
+                                < CONTACTANOS />
+                            </h2>
+                        </div>
+
+                        <div class="line-title">
+                            <hr class="border-2  animated-fliter m-0 " id="line5">
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <div class="row div-form-contact">
+                            <div class="col-lg-6 div-follow">
+                                <div class="container">
+                                    <h3 class=" fw-bold fs-4">Síguenos</h3>
+                                    <a class="fa-brands fa-facebook icon-big color-change-normal color-purple-hover scale-1 transition-300" href=""></a>
                                 </div>
-                                <div>
-                                    <p class="font-title-card my-2 title-project text-center font-semibold"> Proyecto de pasatiempo</p>
-                                    <div class="desc-project">
-                                        <p class="font-card m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                                            accumsan tortor magna, in imperdiet nunc molestie sed.</p>
-                                    </div>
+                                <div class="container">
+                                    <h3 class="fw-bold fs-4">Charla con nosotros</h3>
+                                    <a class="fa-brands fa-whatsapp icon-big color-change-normal color-purple-hover scale-1 transition-300" href=""></a>
+                                </div>
+                            </div>
+                            <div class="col-lg div-form">
+                                <div class="content-form">
+                                    <form name="sentMessage" method="post" action="./sendEmail/Email.php">
+                                        <div class="py-4 displayflex">
+                                            <input type="text" class="form-control form-contact mx-3" name="name" placeholder="Nombre">
+                                        </div>
+
+                                        <div class="pb-4 displayflex">
+                                            <input type="text" class="form-control form-contact mx-3" name="email" placeholder="Correo electrónico">
+                                        </div>
+
+                                        <div class="pb-4 displayflex">
+                                            <input type="text" class="form-control form-contact mx-3" name="subject" placeholder="Asunto del correo">
+                                        </div>
+                                        <div class="pb-4 displayflex">
+                                            <textarea class="form-control form-contact mx-3" rows="5" name="message" placeholder="Mensaje"></textarea>
+                                        </div>
+                                        <div class="text-center pb-4">
+                                            <button class="btn btn-dark ">Enviar <i class="fa-solid fa-paper-plane"></i></button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="card-portfolio p-3">
-                                <div class="cont-img">
-                                    <img class="img-project" src="/source/Fondo_Inicial.jpg">
-                                    <div class="overlay overlay-project position-absolute">
-                                        <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="font-title-card my-2 title-project text-center font-semibold"> Proyecto de pasatiempo</p>
-                                    <div class="desc-project">
-                                        <p class="font-card m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                                            accumsan tortor magna, in imperdiet nunc molestie sed.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card-portfolio p-3">
-                                <div class="cont-img">
-                                    <img class="img-project" src="/source/Fondo_Inicial.jpg">
-                                    <div class="overlay overlay-project position-absolute">
-                                        <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="font-title-card my-2 title-project text-center font-semibold"> Proyecto de pasatiempo</p>
-                                    <div class="desc-project">
-                                        <p class="font-card m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                                            accumsan tortor magna, in imperdiet nunc molestie sed.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
-                <div class="text-center py-2">
-                    <a href="./Projects.html" class="btn btn-dark">Ver Mas </a>
-                </div>
-
-            </section>
-
-            <section id="Our-clients" class="section py-4 title-section" data-title="title-our-clients">
-                <div class="container py-2">
-                    <div class="div_title">
-                        <h2 class="font-title font-bold" id="title-our-clients">
-                            < CLIENTES />
-                        </h2>
-                    </div>
-
-                    <div class="line-title">
-                        <hr class="border-2  animated-fliter m-0 " id="line4">
-                    </div>
-                </div>
-
-                <div class="container pt-3">
-                    <div class="swiper swiper-clients">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="div-info-img text-center">
-                                    <img class="img-fluid" src="source/cara-prueba.png">
-                                    <div class="overlay overlay-clients position-absolute">
-                                        <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="div-info-img">
-                                    <img class="img-fluid" src="source/cara-prueba.png">
-                                    <div class="overlay overlay-clients position-absolute">
-                                        <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="div-info-img">
-                                    <img class="img-fluid" src="source/cara-prueba.png">
-                                    <div class="overlay overlay-clients position-absolute">
-                                        <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="div-info-img">
-                                    <img class="img-fluid" src="source/cara-prueba.png">
-                                    <div class="overlay overlay-clients position-absolute">
-                                        <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="div-info-img">
-                                    <img class="img-fluid" src="source/cara-prueba.png">
-                                    <div class="overlay overlay-clients position-absolute">
-                                        <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="div-info-img">
-                                    <img class="img-fluid" src="source/cara-prueba.png">
-                                    <div class="overlay overlay-clients position-absolute">
-                                        <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pagination-space"></div>
-                        <div class="swiper-pagination swiper-pagination-clients"></div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="Contact" class="section py-4 title-section" data-title="title-contact">
-                <div class="container py-2">
-                    <div class="div_title">
-                        <h2 class="font-title font-bold" id="title-contact">
-                            < CONTACTANOS />
-                        </h2>
-                    </div>
-
-                    <div class="line-title">
-                        <hr class="border-2  animated-fliter m-0 " id="line5">
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="row div-form-contact">
-                        <div class="col-lg-6 div-follow">
-                            <div class="container">
-                                <h3 class=" fw-bold fs-4">Síguenos</h3>
-                                <a class="fa-brands fa-facebook icon-big color-black color-purple-hover scale-1 transition-300" href=""></a>
-                            </div>
-                            <div class="container">
-                                <h3 class="fw-bold fs-4">Charla con nosotros</h3>
-                                <a class="fa-brands fa-whatsapp icon-big color-black color-purple-hover scale-1 transition-300" href=""></a>
-                            </div>
-                        </div>
-                        <div class="col-lg div-form">
-                            <div class="content-form">
-                                <form name="sentMessage" method="post" action="./sendEmail/Email.php">
-                                    <div class="py-4 displayflex">
-                                        <input type="text" class="form-control form-contact mx-3" name="name" placeholder="Nombre">
-                                    </div>
-
-                                    <div class="pb-4 displayflex">
-                                        <input type="text" class="form-control form-contact mx-3" name="email" placeholder="Correo electrónico">
-                                    </div>
-
-                                    <div class="pb-4 displayflex">
-                                        <input type="text" class="form-control form-contact mx-3" name="subject" placeholder="Asunto del correo">
-                                    </div>
-                                    <div class="pb-4 displayflex">
-                                        <textarea class="form-control form-contact mx-3" rows="5" name="message" placeholder="Mensaje"></textarea>
-                                    </div>
-                                    <div class="text-center pb-4">
-                                        <button class="btn btn-dark ">Enviar <i class="fa-solid fa-paper-plane"></i></button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </main>
 
         <footer class="container-fluid text-center py-2 section ">
@@ -492,7 +347,7 @@
                 <div class="row">
                     <div class="col-md text-center pb-2">
                         <p class="mb-2">
-                            <img class="logo-footer my-1" src="/source/logo-center.png">
+                            <img loading="lazy" class="logo-footer my-1" src="/source/logo-center.png" alt="logo footer">
                         </p>
 
                         <div class="pb-2">
@@ -529,13 +384,13 @@
                         <h6 class="font-bold color-purple font-semisubtitle">Contáctenos</h6>
                         <ul class="navbar-nav list-nomark">
                             <li class="nav-link">
-                                <i class="fa-solid fa-location-dot"></i>  Florencia - Caquetá, Colombia
+                                <i class="fa-solid fa-location-dot"></i> Florencia - Caquetá, Colombia
                             </li>
                             <li class="nav-link">
-                                <i class="fa-solid fa-mobile-screen"></i>  +57 3133151739
+                                <i class="fa-solid fa-mobile-screen"></i> +57 3133151739
                             </li>
                             <li class="nav-link">
-                                <i class="fa-solid fa-envelope"></i>  geeksondigital@gmail.com
+                                <i class="fa-solid fa-envelope"></i> geeksondigital@gmail.com
                             </li>
                         </ul>
                     </div>

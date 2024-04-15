@@ -24,70 +24,17 @@
         <div class="line"></div>
     </div>
 
-    <div class="offcanvas offcanvas-start header-offcanvas slide" tabindex="-1" id="offcanvasResponsive">
-        <div class="offcanvas-header">
-            <div class="ms-0 row">
-                <div class="col ps-2 light-dark" id="button-change1">
-                    <i class="fas fa-moon" id="icon-change"></i>
-                </div>
-                <div class="col select-header">
-                    <select class="bg-transparent select-box" name="" id="">
-                        <option selected>ES</option>
-                        <option>EN</option>
-                    </select>
-                </div>
-            </div>
-            <button type="button" class="btn-close me-2 btn-close-white" data-bs-dismiss="offcanvas"
-                data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-
-            <div class="container text-center pb-2">
-                <a href="">
-                    <img class="icon-logo" src="source/Icon_Logo.png" alt="">
-                </a>
-            </div>
-
-            <ul class="navbar-nav">
-                <li class="nav-item py-1">
-                    <a href="#About-us" class="nav-link">Acerca de</a>
-                </li>
-                <li class="nav-item py-1">
-                    <a href="#Service-us" class="nav-link">Servicios</a>
-                </li>
-                <li class="nav-item py-1">
-                    <a href="#Our-portfolio" class="nav-link">Nuestros portafolio</a>
-                </li>
-                <li class="nav-item py-1">
-                    <a href="#Our-clients" class="nav-link">Nuestros clientes</a>
-                </li>
-            </ul>
-        </div>
-        <div class="mt-auto offcanvas-footer text-center">
-            <p>Derechos de autor &copy; 2024 GeeksonDigital</p>
-            <ul class="list-inline">
-                <a class="px-2 a-offcanvas" href=""><i class="fa-brands fa-facebook icon a"></i></a>
-                <a class=" px-2 a-offcanvas" href=""><i class="fa-brands fa-whatsapp icon a"></i></a>
-            </ul>
-        </div>
-    </div>
-
     <!-- Content page -->
     <div data-aos="fade" data-aos-delay="1000">
 
         <header class="navbar navbar-expand-lg navbar-dark fixed-top transparent" id="header">
-            <button class="ms-2 navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
-                <span class="navbar-toggler-icon navbar-toggler-white"></span>
-            </button>
-
             <div class="col-md me-auto ms-auto text-center">
                 <a href="#Home" class="navbar-brand">
-                    <img class="logo-header" src="source/Logo.png" alt="">
+                    <img loading="lazy" class="logo-header" src="source/Logo.png" alt="">
                 </a>
             </div>
 
-            <div class="col-md collapse navbar-collapse">
+            <div class="col-md navbar">
                 <ul class="navbar-nav ms-auto mb-lg-0">
                     <li class="nav-item">
                         <a href="./Index.html" class="nav-link">Inicio</a>
@@ -182,62 +129,68 @@
             
         </main>
 
-        <footer class="container-fluid text-center py-3 section ">
+        <footer class="container-fluid text-center py-2 section ">
+            <div class="p-4">
+                <div class="row">
+                    <div class="col-md text-center pb-2">
+                        <p class="mb-2">
+                            <img loading="lazy" class="logo-footer my-1" src="/source/logo-center.png" alt="logo footer">
+                        </p>
 
-            <div class="row padding3">
-                <div class="col-md text-center pb-2">
-                    <p class="mb-1">
-                        <img class="logo-footer my-1" src="/source/logo-center.png">
-                    </p>
+                        <div class="pb-2">
+                            <a class="px-2 fa-brands fa-facebook icon-medium color-white color-purple-hover scale-1 transition-300" href=""></a>
+                            <a class=" px-2 fa-brands fa-whatsapp icon-medium color-white color-purple-hover scale-1 transition-300" href=""></a>
+                        </div>
+                    </div>
 
-                    <div class="pb-2">
-                        <a class="px-2 a-footer" href=""><i class="fa-brands fa-facebook icon"></i></a>
-                        <a class=" px-2 a-footer" href=""><i class="fa-brands fa-whatsapp icon"></i></a>
+                    <div class="col-md font-normal pb-2">
+                        <h6 class="font-bold color-purple font-semisubtitle">Acceso directo</h6>
+                        <p class="my-1 p_info">
+
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#Home">Inicio</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#About-us">Acerca de nosotros</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#Service-us">Servicios</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#Our-portfolio">Nuestros proyectos</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#Our-clients">Clientes</a>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+
+                    <div class="col-md font-normal pb-2">
+                        <h6 class="font-bold color-purple font-semisubtitle">Contáctenos</h6>
+                        <ul class="navbar-nav list-nomark">
+                            <li class="nav-link">
+                                <i class="fa-solid fa-location-dot"></i> Florencia - Caquetá, Colombia
+                            </li>
+                            <li class="nav-link">
+                                <i class="fa-solid fa-mobile-screen"></i> +57 3133151739
+                            </li>
+                            <li class="nav-link">
+                                <i class="fa-solid fa-envelope"></i> geeksondigital@gmail.com
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="col-md pb-2">
-                    <h6 class="fw-bold fs-5 icon3">Acceso directo</h6>
-                    <p class="my-1 p_info">
-
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link p-1" href="#Home">Inicio</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link p-1" href="#About-us">Acerca de nosotros</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link p-1" href="#Service-us">Servicios</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link p-1" href="#Our-portfolio">Nuestros proyectos</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link p-1" href="#Our-clients">Clientes</a>
-                        </li>
-                    </ul>
+                <div class="pt-2">
+                    <p class="text-center font-normal m-0">
+                        © Copyright 2024 <a class="font-blod color-purple" href="#">Geekson Digital</a>.
+                        <br>
+                        Todos Los Derechos Reservados.
+                        <br>
                     </p>
                 </div>
-
-                <div class="col-md pb-2">
-                    <h6 class="fw-bold fs-5 icon3">Contáctenos</h6>
-                    <p class="my-1 p_info"><i class="fa-solid fa-location-dot"></i> Florencia - Caquetá, Colombia
-                    </p>
-                    <p class="my-1 p_info"><i class="fa-solid fa-mobile-screen"></i> +57 3133151739</p>
-                    <p class="my-1 p_info"><i class="fa-solid fa-envelope"></i> geeksondigital@gmail.com
-                    </p>
-                </div>
-
-            </div>
-
-            <div>
-                <p class="text-center m-0">
-                    © Copyright 2024 <a class="font-weight-bold colorBase" href="#">Geekson Digital</a>.
-                    <br>
-                    Todos Los Derechos Reservados.
-                    <br>
-                </p>
             </div>
         </footer>
 

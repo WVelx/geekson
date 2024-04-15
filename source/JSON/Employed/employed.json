@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Johan Orlando Daza Amaya",
+        "image": "source/cara-prueba.png",
+        "work-position": "CEO, CO-Founder"
+    },
+    {
+        "id": 2,
+        "name": "Christian Andrés Acosta Cárdenas",
+        "image": "source/cara-prueba.png",
+        "work-position": "CO-Founder, IT Lead"
+    },
+    {
+        "id": 3,
+        "name": "Johan Sebastian Osorio Perea",
+        "image": "source/cara-prueba.png",
+        "work-position": "Designer"
+    },
+    {
+        "id": 4,
+        "name": "Mclovin",
+        "image": "source/cara-prueba.png",
+        "work-position": "President"
+    }
+]
