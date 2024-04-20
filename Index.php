@@ -22,97 +22,14 @@
         <div class="line"></div>
     </div>
 
-    <div class="offcanvas offcanvas-start bg-black slide" tabindex="-1" id="offcanvasResponsive">
-        <div class="offcanvas-header">
-            <div class="ms-0 row">
-                <div class="col ps-2 light-dark" id="button-change1">
-                    <i class="fas fa-moon" id="icon-change"></i>
-                </div>
-                <div class="col select-header">
-                    <select class="bg-transparent select-box" name="" id="">
-                        <option selected>ES</option>
-                        <option>EN</option>
-                    </select>
-                </div>
-            </div>
-            <button type="button" class="btn-close me-2 btn-close-white" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-
-            <div class="container text-center pb-2">
-                <a href="">
-                    <img loading="lazy" class="icon-logo" src="source/Icon_Logo.png" alt="logo Geekson Digital extendido">
-                </a>
-            </div>
-
-            <ul class="navbar-nav">
-                <li class="nav-item py-1">
-                    <a href="#About-us" class="nav-link">Acerca de</a>
-                </li>
-                <li class="nav-item py-1">
-                    <a href="#Service-us" class="nav-link">Servicios</a>
-                </li>
-                <li class="nav-item py-1">
-                    <a href="#Our-portfolio" class="nav-link">Nuestros portafolio</a>
-                </li>
-                <li class="nav-item py-1">
-                    <a href="#Our-clients" class="nav-link">Nuestros clientes</a>
-                </li>
-            </ul>
-        </div>
-        <div class="mt-auto text-center">
-            <p class="color-graywhite">Derechos de autor &copy; 2024 GeeksonDigital</p>
-            <ul class="list-inline">
-                <a class="px-2 color-white color-purple-hover fa-brands fa-facebook icon-menu scale-1 transition-300" href=""></a>
-                <a class=" px-2 color-white color-purple-hover fa-brands fa-whatsapp icon-menu scale-1 transition-300" href=""></a>
-            </ul>
-        </div>
-    </div>
+    <!-- AGREGAR MENU -->
+    <?php include('./source/Layout/menu.php'); ?>
 
     <!-- Content page -->
     <div data-aos="fade" data-aos-delay="1000">
 
-        <header class="navbar navbar-expand-lg navbar-dark fixed-top opacity-9 transparent" id="header">
-            <div class="container p-0">
-                <button class="ms-2 navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
-                    <span class="navbar-toggler-icon navbar-toggler-white"></span>
-                </button>
-
-                <div class="col-md center-md">
-                    <a href="#Home" class="navbar-brand m-0 p-0">
-                        <img loading="lazy" class="logo-header" src="source/Logo.png" alt="logo Geekson Digital extendido">
-                    </a>
-                </div>
-
-                <div class="col-md collapse navbar-collapse">
-                    <ul class="navbar-nav ms-auto mb-lg-0">
-                        <li class="nav-item">
-                            <a href="#About-us" class="nav-link">Acerca de</a>
-                        </li>
-                        <li class="nav-item ps-2">
-                            <a href="#Service-us" class="nav-link">Servicios</a>
-                        </li>
-                        <li class="nav-item ps-2">
-                            <a href="#Our-portfolio" class="nav-link">Nuestros portafolio</a>
-                        </li>
-                        <li class="nav-item px-2">
-                            <a href="#Our-clients" class="nav-link">Nuestros clientes</a>
-                        </li>
-                        <li class="row">
-                            <div class="col select-header">
-                                <select class="bg-transparent select-box" name="" id="">
-                                    <option selected>ES</option>
-                                    <option>EN</option>
-                                </select>
-                            </div>
-                            <div class="col ps-2 light-dark" id="button-change2">
-                                <i class="fas fa-moon" id="icon-change"></i>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+        <!-- AGREGAR HEADER -->
+        <?php include('./source/Layout/header.php'); ?>
 
         <main>
             <section id="Home" class="section show">
@@ -203,57 +120,10 @@
 
                     <div class="pt-4">
                         <div class="row justify-content-center">
-                            <div class="col-md-4">
-                                <div class="card-portfolio border-r p-3 m-2">
-                                    <div class="cont-img border-r position-relative overflow-hidden d-inline-block">
-                                        <img class="img-project" src="/source/Fondo_Inicial.jpg">
-                                        <div class="overlay overlay-project position-absolute">
-                                            <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="font-title-card color-change-import my-2 text-center font-semibold font-shadow-small"> Proyecto de pasatiempo</p>
-                                        <div class="desc-project">
-                                            <p class="font-card color-change-normal m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                                                accumsan tortor magna, in imperdiet nunc molestie sed.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card-portfolio border-r p-3 m-2">
-                                    <div class="cont-img border-r position-relative overflow-hidden d-inline-block">
-                                        <img class="img-project" src="/source/Fondo_Inicial.jpg">
-                                        <div class="overlay overlay-project position-absolute">
-                                            <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="font-title-card color-change-import my-2 text-center font-semibold font-shadow-small"> Proyecto de pasatiempo</p>
-                                        <div class="desc-project">
-                                            <p class="font-card color-change-normal m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                                                accumsan tortor magna, in imperdiet nunc molestie sed.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card-portfolio border-r p-3 m-2">
-                                    <div class="cont-img border-r position-relative overflow-hidden d-inline-block">
-                                        <img class="img-project" src="/source/Fondo_Inicial.jpg">
-                                        <div class="overlay overlay-project position-absolute">
-                                            <a class="button-overlay fa-solid fa-eye icon-medium color-purple scale-1 transition-300" href="#"></a>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <p class="font-title-card color-change-import my-2 text-center font-semibold font-shadow-small"> Proyecto de pasatiempo</p>
-                                        <div class="desc-project">
-                                            <p class="font-card color-change-normal m-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-                                                accumsan tortor magna, in imperdiet nunc molestie sed.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- AGREGAR PORTAFOLIO -->
+                            <?php include('./source/JSON/Projects/projects.php'); 
+                                echo last_project();
+                            ?>
                         </div>
 
                         <div class="text-center pt-4">
@@ -342,71 +212,8 @@
             </div>
         </main>
 
-        <footer class="container-fluid text-center py-2 section ">
-            <div class="p-4">
-                <div class="row">
-                    <div class="col-md text-center pb-2">
-                        <p class="mb-2">
-                            <img loading="lazy" class="logo-footer my-1" src="/source/logo-center.png" alt="logo footer">
-                        </p>
-
-                        <div class="pb-2">
-                            <a class="px-2 fa-brands fa-facebook icon-medium color-white color-purple-hover scale-1 transition-300" href=""></a>
-                            <a class=" px-2 fa-brands fa-whatsapp icon-medium color-white color-purple-hover scale-1 transition-300" href=""></a>
-                        </div>
-                    </div>
-
-                    <div class="col-md font-normal pb-2">
-                        <h6 class="font-bold color-purple font-semisubtitle">Acceso directo</h6>
-                        <p class="my-1 p_info">
-
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#Home">Inicio</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#About-us">Acerca de nosotros</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#Service-us">Servicios</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#Our-portfolio">Nuestros proyectos</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#Our-clients">Clientes</a>
-                            </li>
-                        </ul>
-                        </p>
-                    </div>
-
-                    <div class="col-md font-normal pb-2">
-                        <h6 class="font-bold color-purple font-semisubtitle">Contáctenos</h6>
-                        <ul class="navbar-nav list-nomark">
-                            <li class="nav-link">
-                                <i class="fa-solid fa-location-dot"></i> Florencia - Caquetá, Colombia
-                            </li>
-                            <li class="nav-link">
-                                <i class="fa-solid fa-mobile-screen"></i> +57 3133151739
-                            </li>
-                            <li class="nav-link">
-                                <i class="fa-solid fa-envelope"></i> geeksondigital@gmail.com
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="pt-2">
-                    <p class="text-center font-normal m-0">
-                        © Copyright 2024 <a class="font-blod color-purple" href="#">Geekson Digital</a>.
-                        <br>
-                        Todos Los Derechos Reservados.
-                        <br>
-                    </p>
-                </div>
-            </div>
-        </footer>
-
+        <!-- AGREGAR FOOTER -->
+        <?php include('./source/Layout/footer.php'); ?>
     </div>
 
     <!-- SCRIPTS -->

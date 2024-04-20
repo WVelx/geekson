@@ -1,7 +1,7 @@
 [
     {
         "projectID": 1,
-        "project": "Proyecto de pasatiempo",
+        "project": "Proyecto de pasatiempo 1",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan tortor magna, in imperdiet nunc molestie sed.",
         "link": "*",
         "images": "/source/Fondo_Inicial.jpg",
@@ -14,11 +14,11 @@
     },
     {
         "projectID": 2,
-        "project": "Proyecto de pasatiempo",
+        "project": "Proyecto de pasatiempo 2",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan tortor magna, in imperdiet nunc molestie sed.",
         "link": "*",
         "images": "/source/Fondo_Inicial.jpg",
-        "date": "2024-03-05",
+        "date": "2024-03-01",
         "technologies": [
             {
                 "name": "Php"
@@ -27,11 +27,11 @@
     },
     {
         "projectID": 3,
-        "project": "Proyecto de pasatiempo",
+        "project": "Proyecto de pasatiempo 3",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan tortor magna, in imperdiet nunc molestie sed.",
         "link": "*",
         "images": "/source/Fondo_Inicial.jpg",
-        "date": "2024-03-05",
+        "date": "2023-03-05",
         "technologies": [
             {
                 "name": "Php"
@@ -40,11 +40,11 @@
     },
     {
         "projectID": 4,
-        "project": "Proyecto de pasatiempo",
+        "project": "Proyecto de pasatiempo 4",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan tortor magna, in imperdiet nunc molestie sed.",
         "link": "*",
         "images": "/source/Fondo_Inicial.jpg",
-        "date": "2024-03-05",
+        "date": "2024-03-04",
         "technologies": [
             {
                 "name": "Php"
@@ -53,11 +53,11 @@
     },
     {
         "projectID": 5,
-        "project": "Proyecto de pasatiempo",
+        "project": "Proyecto de pasatiempo 5",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan tortor magna, in imperdiet nunc molestie sed.",
         "link": "*",
         "images": "/source/Fondo_Inicial.jpg",
-        "date": "2024-03-05",
+        "date": "2022-03-05",
         "technologies": [
             {
                 "name": "Php"
@@ -66,11 +66,11 @@
     },
     {
         "projectID": 6,
-        "project": "Proyecto de pasatiempo",
+        "project": "Proyecto de pasatiempo 6",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce accumsan tortor magna, in imperdiet nunc molestie sed.",
         "link": "*",
         "images": "/source/Fondo_Inicial.jpg",
-        "date": "2024-03-05",
+        "date": "2023-03-05",
         "technologies": [
             {
                 "name": "Php"
